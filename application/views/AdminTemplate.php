@@ -26,6 +26,40 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\css\style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\css\jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\scss\partials\menu\_pcmenu.htm">
+
+     <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery\js\jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery-ui\js\jquery-ui.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\popper.js\js\popper.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\bootstrap\js\bootstrap.min.js"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery-slimscroll\js\jquery.slimscroll.js"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\modernizr\js\modernizr.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\modernizr\js\css-scrollbars.js"></script>
+
+    <!-- i18next.min.js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\i18next\js\i18next.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\i18next-xhr-backend\js\i18nextXHRBackend.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\i18next-browser-languagedetector\js\i18nextBrowserLanguageDetector.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery-i18next\js\jquery-i18next.min.js"></script>
+    <script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\pcoded.min.js"></script>
+    <script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\vartical-layout.min.js"></script>
+    <script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Custom js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\script.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
 </head>
 
 <body>
@@ -136,15 +170,55 @@
 
                             <div class="pcoded-navigatio-lavel">Kendaraan Baru</div>
                             <ul class="pcoded-item pcoded-left-item">
-                                <li class="pcoded-hasmenu">
+                                <li class="pcoded-hasmenu <?php if($title=='Pendaftaran BBN 1'||$title=='Registrasi BBN 1'||$title=='Monitor Print Kartu Induk BBN 1'||$title=='Print Tanda Terima BBN 1'||$title=='Verifikasi BBN 1'||$title=='Penulisan BBN 1'||$title=='Cetak Legalitas BPKB BBN 1'||$title=='Laporan BBN 1'||$title=='Laporan BBN 1'){ echo "active pcoded-trigger"; } ?> ">
                                     <a href="javascript:void(0)">
                                         <span class="pcoded-micon"><i class="feather icon-box"></i></span>
                                         <span class="pcoded-mtext">BBN1</span>
                                     </a>
                                     <ul class="pcoded-submenu">
-                                        <li class="">
-                                            <a href="index-1.htm">
-                                                <span class="pcoded-mtext">Default</span>
+                                        <li class="<?php if($title=='Pendaftaran BBN 1'){ echo 'active'; } ?>">
+                                            <a href="BbnSatuPendaftaran">
+                                                <span class="pcoded-mtext">Pendaftaran</span>
+                                            </a>
+                                        </li>
+                                        <li class="<?php if($title=='Registrasi BBN 1'){ echo 'active'; } ?>">
+                                            <a href="BbnSatuRegistrasi">
+                                                <span class="pcoded-mtext">Registrasi</span>
+                                            </a>
+                                        </li>
+                                        <li class="<?php if($title=='Monitor Print Kartu Induk BBN 1'){ echo 'active'; } ?>">
+                                            <a href="BbnSatuMonitorKartuInduk">
+                                                <span class="pcoded-mtext">Monitor Print Kartu Induk</span>
+                                            </a>
+                                        </li>
+                                        <li class="<?php if($title=='Print Tanda Terima BBN 1'){ echo 'active'; } ?>">
+                                            <a href="BbnSatuTandaTerima">
+                                                <span class="pcoded-mtext">Print Tanda Terima</span>
+                                            </a>
+                                        </li>
+                                        <li class="<?php if($title=='Verifikasi BBN 1'){ echo 'active'; } ?>">
+                                            <a href="BbnSatuVerifikasi">
+                                                <span class="pcoded-mtext">Verifikasi </span>
+                                            </a>
+                                        </li>
+                                        <li class="<?php if($title=='Penulisan BBN 1'){ echo 'active'; } ?>">
+                                            <a href="BbnSatuPenulisan">
+                                                <span class="pcoded-mtext">Penulisan</span>
+                                            </a>
+                                        </li>
+                                        <li class="<?php if($title=='Penyerahan BPKB BBN 1'){ echo 'active'; } ?>">
+                                            <a href="BbnSatuPenyerahan">
+                                                <span class="pcoded-mtext">Penyerahan BPKB</span>
+                                            </a>
+                                        </li>
+                                        <li class="<?php if($title=='Laporan BBN 1'){ echo 'active'; } ?>">
+                                            <a href="BbnSatuLaporan">
+                                                <span class="pcoded-mtext">Laporan</span>
+                                            </a>
+                                        </li>
+                                        <li class="<?php if($title=='Cetak Legalitas BBN 1'){ echo 'active'; } ?>">
+                                            <a href="BbnSatuLegalitas">
+                                                <span class="pcoded-mtext">Cetak Legalitas</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -213,39 +287,7 @@
     </div>
 
     <!-- Required Jquery -->
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery\js\jquery.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery-ui\js\jquery-ui.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\popper.js\js\popper.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\bootstrap\js\bootstrap.min.js"></script>
-    <!-- jquery slimscroll js -->
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery-slimscroll\js\jquery.slimscroll.js"></script>
-    <!-- modernizr js -->
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\modernizr\js\modernizr.js"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\modernizr\js\css-scrollbars.js"></script>
-
-    <!-- i18next.min.js -->
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\i18next\js\i18next.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\i18next-xhr-backend\js\i18nextXHRBackend.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\i18next-browser-languagedetector\js\i18nextBrowserLanguageDetector.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery-i18next\js\jquery-i18next.min.js"></script>
-    <script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\pcoded.min.js"></script>
-    <script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\vartical-layout.min.js"></script>
-    <script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\jquery.mCustomScrollbar.concat.min.js"></script>
-    <!-- Custom js -->
-    <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\script.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-23581568-13');
-    </script>
+   
 </body>
 
 </html>
