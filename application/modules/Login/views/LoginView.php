@@ -85,87 +85,46 @@
                             <div class="card-block">
                                 <div class="row m-b-20">
                                     <div class="col-md-12">
-                                        <h3 class="text-center">Sign In</h3>
+                                        <h3 class="text-center">Log In</h3>
                                     </div>
                                 </div>
                                 <div class="form-group form-primary">
-                                    <input type="text" name="email" class="form-control" required="" placeholder="Your Email Address">
+                                    <input type="text" id="email" name="email" class="form-control" required placeholder="Alamat Email">
                                     <span class="form-bar"></span>
                                 </div>
+
                                 <div class="form-group form-primary">
-                                    <input type="password" name="password" class="form-control" required="" placeholder="Password">
+                                    <input type="password" id="password" name="password" class="form-control" required placeholder="Password">
                                     <span class="form-bar"></span>
                                 </div>
+
                                 <div class="row m-t-25 text-left">
                                     <div class="col-12">
                                         <div class="forgot-phone text-right f-right">
-                                            <a href="auth-reset-password.htm" class="text-right f-w-600"> Forgot Password?</a>
+                                            <a href="auth-reset-password.htm" class="text-right f-w-600"> Lupa Password?</a>
                                         </div>
                                     </div>
                                 </div>
 
                                 <hr>
 
-                                <div class="row m-t-30">
-                                    <div class="col-md-12">
-                                        <button type="button" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
-                                    </div>
-                                </div>
+                                <a class="row m-t-30">
+                                    <a class="col-md-12">
+                                        <a href="<?= site_url('dashboard') ?>" type="button" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Login</a>
+                                    </a>
                             </div>
                         </div>
-                    </form>
-                    <!-- end of form -->
                 </div>
-                <!-- end of col-sm-12 -->
+                </form>
+                <!-- end of form -->
             </div>
-            <!-- end of row -->
+            <!-- end of col-sm-12 -->
+        </div>
+        <!-- end of row -->
         </div>
         <!-- end of container-fluid -->
+
     </section>
-    <!-- Warning Section Starts -->
-    <!-- Older IE warning message -->
-    <!--[if lt IE 10]>
-<div class="ie-warning">
-    <h1>Warning!!</h1>
-    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
-    <div class="iew-container">
-        <ul class="iew-download">
-            <li>
-                <a href="http://www.google.com/chrome/">
-                    <img src="<?php echo base_url('assets/adminty/'); ?>/files/assets/images/browser/chrome.png" alt="Chrome">
-                    <div>Chrome</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="../files/assets/images/browser/firefox.png" alt="Firefox">
-                    <div>Firefox</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.opera.com">
-                    <img src="../files/assets/images/browser/opera.png" alt="Opera">
-                    <div>Opera</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.apple.com/safari/">
-                    <img src="../files/assets/images/browser/safari.png" alt="Safari">
-                    <div>Safari</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="../files/assets/images/browser/ie.png" alt="">
-                    <div>IE (9 & above)</div>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <p>Sorry for the inconvenience!</p>
-</div>
-<![endif]-->
-    <!-- Warning Section Ends -->
     <!-- Required Jquery -->
     <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery\js\jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery-ui\js\jquery-ui.min.js"></script>
