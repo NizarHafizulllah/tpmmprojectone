@@ -170,7 +170,7 @@
 
                             <div class="pcoded-navigatio-lavel">Kendaraan Baru</div>
                             <ul class="pcoded-item pcoded-left-item">
-                                <li class="pcoded-hasmenu <?php if($title=='Pendaftaran BBN 1'||$title=='Registrasi BBN 1'||$title=='Monitor Print Kartu Induk BBN 1'||$title=='Print Tanda Terima BBN 1'||$title=='Verifikasi BBN 1'||$title=='Penulisan BBN 1'||$title=='Cetak Legalitas BPKB BBN 1'||$title=='Laporan BBN 1'||$title=='Laporan BBN 1'){ echo "active pcoded-trigger"; } ?> ">
+                                <li class="pcoded-hasmenu <?php if($title=='Pendaftaran BBN 1'||$title=='Registrasi BBN 1'||$title=='Monitor Print Kartu Induk BBN 1'||$title=='Print Tanda Terima BBN 1'||$title=='Verifikasi BBN 1'||$title=='Penulisan BBN 1'||$title=='Cetak Legalitas BPKB BBN 1'||$title=='Penyerahan BPKB BBN 1'||$title=='Laporan BBN 1'||$title=='Cetak Legalitas BBN 1'){ echo "active pcoded-trigger"; } ?> ">
                                     <a href="javascript:void(0)">
                                         <span class="pcoded-micon"><i class="feather icon-box"></i></span>
                                         <span class="pcoded-mtext">BBN1</span>
