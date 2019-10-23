@@ -50,7 +50,6 @@
     <footer class="light">
         <ul>
             <li><a href="<?php echo site_url('Dashboard'); ?>">Kembali</a></li>
-            
         </ul>
     </footer>
     <script src="<?php echo base_url('assets/adminty/files/extra-pages/404/1/'); ?>/js\jquery.min.js"></script>
