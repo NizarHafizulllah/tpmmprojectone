@@ -116,13 +116,9 @@
                         </div>
                 </div>
                 </form>
-                <!-- end of form -->
             </div>
-            <!-- end of col-sm-12 -->
         </div>
-        <!-- end of row -->
         </div>
-        <!-- end of container-fluid -->
 
     </section>
     <!-- Required Jquery -->
