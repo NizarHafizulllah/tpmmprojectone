@@ -2,10 +2,33 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-block">
+                <div class="card-header">
+                    <div class="card-header-right">
+                        <button onclick="window.location.href='BbnSatuPendaftaran'" class="btn btn-danger btn-sm ml-1 text-white">Kembali</button>
+                    </div>
+                </div>
+                <div class="card-block align-center">
                     <div class="form-group row mb-2">
                         <div class="col-md-4 col-lg-2">
-                            <label for="userName-2" class="block">Tanggal</label>
+                            <label for="userName-2" class="block">Nama</label>
+                        </div>
+                        <div class="col-md-8 col-lg-6">
+                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <div class="col-md-4 col-lg-2">
+                            <label for="userName-2" class="block">Alamat</label>
+                        </div>
+                        <div class="col-md-8 col-lg-6">
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <div class="col-md-4 col-lg-2">
+                            <label for="userName-2" class="block">No. Telepon</label>
                         </div>
                         <div class="col-md-8 col-lg-4">
                             <input id="userName-2" name="userName" type="text" class="required form-control">
@@ -14,83 +37,72 @@
 
                     <div class="form-group row mb-2">
                         <div class="col-md-4 col-lg-2">
-                            <label for="email-2" class="block">Jenis Pemohon</label>
+                            <label for="userName-2" class="block">No. HP</label>
                         </div>
-                        <div class="col-sm-10">
-                            <div class="form-radio">
-                                <div class="radio radiofill radio-inverse radio-inline">
-                                    <label>
-                                        <input type="radio" name="member" value="free" data-bv-field="member">
-                                        <i class="helper"></i>Pribadi
-                                    </label>
-                                </div>
-                                <div class="radio radiofill radio-inverse radio-inline active">
-                                    <label>
-                                        <input type="radio" name="member" value="personal" data-bv-field="member">
-                                        <i class="helper"></i>Birojasa
-                                    </label>
-                                </div>
-                            </div>
+                        <div class="col-md-8 col-lg-4">
+                            <input id="userName-2" name="userName" type="text" class="required form-control">
                         </div>
                     </div>
 
                     <div class="form-group row mb-2">
                         <div class="col-md-4 col-lg-2">
-                            <label for="email-2" class="block">Pemohon</label>
+                            <label for="userName-2" class="block">Nama Bank</label>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-md-8 col-lg-6">
+                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <div class="col-md-4 col-lg-2">
+                            <label for="userName-2" class="block">No Rekening</label>
+                        </div>
+                        <div class="col-md-8 col-lg-6">
+                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <div class="col-md-4 col-lg-2">
+                            <label for="userName-2" class="block">Perusahaan</label>
+                        </div>
+                        <div class="col-md-8 col-lg-6">
                             <select id="" class="form-control">
-                                <option value="">- Pilih -</option>
+                                <option value="cheese">- Pilih -</option>
                                 <option value="cheese">Cheese</option>
                                 <option value="h">Hanry Die</option>
                                 <option value="c">Come Leo</option>
                                 <option value="h">Hampri Catlin</option>
                             </select>
                         </div>
-                        <button class="btn btn-inverse btn btn-sm"><i class="icofont icofont-refresh"></i></button>
-                        <button onclick="window.location.href='BbnSatuDataPemohon'" class=" btn btn-inverse btn btn-sm ml-1 waves-effect"><i class="icofont icofont-ui-add"></i></button>
+                        <div class="col-md-8 col-lg-1">
+                            <button class="btn btn-inverse btn btn-sm"><i class="icofont icofont-listine-dots"></i></button>
+                        </div>
                     </div>
 
                     <div class="form-group row mb-2">
                         <div class="col-md-4 col-lg-2">
-                            <label for="userName-2" class="block"></label>
+                            <label for="userName-2" class="block">Tanggal</label>
+                        </div>
+                        <div class="col-md-8 col-lg-3">
+                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <div class="col-md-4 col-lg-2">
+                            <label for="userName-2" class="block">Jenis</label>
                         </div>
                         <div class="col-md-8 col-lg-4">
-                            <button class=" btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-search"></i>Tampil Data</button>
+                            <select id="" class="form-control">
+                                <option value="cheese">- Pilih -</option>
+                                <option value="cheese">Cheese</option>
+                                <option value="h">Hanry Die</option>
+                                <option value="c">Come Leo</option>
+                                <option value="h">Hampri Catlin</option>
+                            </select>
                         </div>
                     </div>
-
-                    <hr>
-
-                    <div class="form-group row mb-2">
-                        <div class="col-md-4 col-lg-2">
-                            <label for="confirm-2" class="block">No Resi Pembayaran</label>
-                        </div>
-                        <div class="col-md-4 col-lg-4">
-                            <input id="confirm-2" name="confirm" type="password" class="form-control required">
-                        </div>
-                        <div class="col-md-4 col-lg-4">
-                            <div class="checkbox-fade fade-in-inverse">
-                                <label>
-                                    <input type="checkbox" id="checkbox" name="Language" value="HTML">
-                                    <span class="cr">
-                                        <i class="cr-icon icofont icofont-ui-check txt-inverse"></i>
-                                    </span>
-                                    <span>Diplomat</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group row mb-2">
-                        <div class="col-md-4 col-lg-2">
-                            <label for="confirm-2" class="block">No Rangka</label>
-                        </div>
-                        <div class="col-md-8 col-lg-4">
-                            <input id="confirm-2" name="confirm" type="password" class="form-control required">
-                        </div>
-                    </div>
-
                     <div class="form-group row mb-2">
                         <div class="col-md-4 col-lg-2">
                             <label for="userName-2" class="block"></label>
@@ -102,7 +114,6 @@
                             <button class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-print"></i>Cetak</button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -78,11 +78,11 @@ $tnsname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => $tnsname,
-	'username' => 'nizar',
-	'password' => 'bukanrahasia',
+	'hostname' => 'localhost', //$tnsname,
+	'username' => 'root', //'nizar',
+	'password' => '', //'bukanrahasia',
 	'database' => '',
-	'dbdriver' => 'oci8',
+	'dbdriver' => 'mysqli', //'oci8',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
