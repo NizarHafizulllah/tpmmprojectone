@@ -56,6 +56,7 @@
 
         gtag('config', 'UA-23581568-13');
     </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 </head>
 
 <body class="fix-menu">
@@ -105,7 +106,7 @@
                 <div class="col-sm-12">
                     <!-- Authentication card start -->
 
-                    <form class="md-float-material form-material">
+                    <form class="md-float-material form-material" id="formdata">
                         <div class="text-center">
                             <img src="<?php echo base_url('assets/adminty/'); ?>\files\assets\images\logos.png" alt="logo.png">
                         </div>
@@ -117,12 +118,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group form-primary">
-                                    <input type="text" id="email" name="email" class="form-control" required placeholder="Alamat Email">
+                                    <input type="text" id="email" name="email" class="form-control" required placeholder="Alamat Email" value="upie">
                                     <span class="form-bar"></span>
                                 </div>
 
                                 <div class="form-group form-primary">
-                                    <input type="password" id="password" name="password" class="form-control" required placeholder="Password">
+                                    <input type="password" id="password" name="password" class="form-control" required placeholder="Password" value="d1nd4r3tno">
                                     <span class="form-bar"></span>
                                 </div>
 
@@ -138,7 +139,7 @@
 
                                 <a class="row m-t-30">
                                     <a class="col-md-12">
-                                        <button onclick="dashboard()" type="button" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Login</button>
+                                        <button type="button" id="loginbtn" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Login</button>
                                     </a>
                             </div>
                         </div>
@@ -148,12 +149,11 @@
         </div>
         </div>
 
+        <?php 
+        $this->load->view('LoginViewJs');
+         ?>
 
-        <script type="text/javascript">
-            function dashboard(){
-                window.location = "<?php echo site_url('Dashboard') ?>";
-            }
-        </script>
+      
     </section>
     <!-- Required Jquery -->
     

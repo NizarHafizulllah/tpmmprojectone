@@ -76,29 +76,21 @@
                     <!-- Tab panes -->
                     <div class="tab-content tabs card-block">
                         <div class="tab-pane active" id="home1" role="tabpanel">
+                            <form>
                             <div class="row">
-
-                                <div class="col-6">
-
-                                    <div class="form-group row mb-1">
-                                        <div class="col-3">
-                                            <label for="userName-2" class="block">No. BPKB</label>
-                                        </div>
-                                        <div class="col-9">
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group row  mr-1">
+                                            <label class="block">No. BPKB</label>
                                             <input id="userName-2" name="userName" type="text" class="required form-control">
-                                        </div>
                                     </div>
 
-                                    <div class="form-group row mb-1">
-                                        <div class="col-3">
+                                    <div class="form-group row">
                                             <label for="userName-2" class="block">Dikeluarkan di</label>
-                                        </div>
-                                        <div class="col-9">
                                             <input id="userName-2" name="userName" type="text" class="required form-control">
-                                        </div>
                                     </div>
 
-                                    <div class="form-group row mb-1">
+                                    <div class="form-group row">
                                         <div class="col-3">
                                             <label for="userName-2" class="block">No. Rangka</label>
                                         </div>
@@ -181,11 +173,20 @@
 
                                 </div>
 
-                                <div class="col-6">
+                                <div class="col-md-4">
+                                    <div class="form-group row mr-1">
+                                            <label class="block">No. BPKB</label>
+                                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                                    </div>
 
-                                    <div class="form-group row mb-1">
+                                    <div class="form-group row">
+                                            <label for="userName-2" class="block">Dikeluarkan di</label>
+                                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                                    </div>
+
+                                    <div class="form-group row">
                                         <div class="col-3">
-                                            <label for="userName-2" class="block">No. Reg BPKB</label>
+                                            <label for="userName-2" class="block">No. Rangka</label>
                                         </div>
                                         <div class="col-9">
                                             <input id="userName-2" name="userName" type="text" class="required form-control">
@@ -193,6 +194,86 @@
                                     </div>
 
                                     <div class="form-group row mb-1">
+                                        <div class="col-3">
+                                            <label for="userName-2" class="block">Merk</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mb-1">
+                                        <div class="col-3">
+                                            <label for="userName-2" class="block">Tipe</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mb-1">
+                                        <div class="col-3">
+                                            <label for="userName-2" class="block">Model</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mb-1">
+                                        <div class="col-3">
+                                            <label for="userName-2" class="block">Tahun Buat</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mb-1">
+                                        <div class="col-3">
+                                            <label for="userName-2" class="block">Jumlah Roda</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mb-1">
+                                        <div class="col-3">
+                                            <label for="userName-2" class="block">Bahan Bakar</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mb-1">
+                                        <div class="col-3">
+                                            <label for="userName-2" class="block">Peruntukan</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-3">
+                                            <label for="userName-2" class="block">Warna TNKB</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row mr-1">
+                                            <label class="block">No. Reg BPKB</label>
+                                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                                    </div>
+
+                                    <div class="form-group row mr-1">
                                         <div class="col-3">
                                             <label for="userName-2" class="block">Tanggal</label>
                                         </div>
@@ -281,10 +362,9 @@
                                             <input id="userName-2" name="userName" type="text" class="required form-control">
                                         </div>
                                     </div>
-
+                                    </div>
                                 </div>
-                            </div>
-
+                             </form>
                             <div class="row">
 
                                 <div class="col-8">

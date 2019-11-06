@@ -73,16 +73,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-$tnsname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
-        (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = XE)))';
+$tnsname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 180.250.16.227)(PORT = 1521))
+        (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = ORA11G.HOME.COM)))';
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost', //$tnsname,
-	'username' => 'root', //'nizar',
-	'password' => '', //'bukanrahasia',
+	'hostname' => $tnsname,
+	'username' => 'DBSIFIK_MKS', //'nizar',
+	'password' => 'p1k1r3ndh3w3', //'bukanrahasia',
 	'database' => '',
-	'dbdriver' => 'mysqli', //'oci8',
+	'dbdriver' => 'oci8',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),

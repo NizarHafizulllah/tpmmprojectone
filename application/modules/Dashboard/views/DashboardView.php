@@ -3,7 +3,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h5>Selamat datang M Rezkha Adhitya!</h5>
+                    <h5>Selamat datang <?php echo $this->userdata['vl_op_nama']; ?>!</h5>
                     <span>Aplikasi pencetakan BPKB Online Indonesia, and Login sebagai <strong>User</strong>.</span>
                 </div>
                 <div class="card-block">
