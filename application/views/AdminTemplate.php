@@ -114,10 +114,15 @@
 
                     <div class="navbar-container container-fluid">
                         <ul class="nav-left">
-                            <li>
-                                <a href="#!" onclick="javascript:toggleFullScreen()">
+                            <li class="mt-3">
+                                <!-- <a href="#!" onclick="javascript:toggleFullScreen()">
                                     <i class="feather icon-maximize full-screen"></i>
-                                </a>
+                                </a> -->
+
+                                <div class="d-inline">
+                                    <h4><strong> <?= $title; ?></strong></h4>
+                                    <!-- <span><?= $subtitle; ?></span> -->
+                                </div>
                             </li>
                         </ul>
 
@@ -1015,25 +1020,11 @@
                         <div class="pcoded-inner-content">
                             <!-- Main-body start -->
                             <div class="main-body">
-                                <div class="page-wrapper">
-                                    <!-- Page-header start -->
-                                    <div class="page-header text-center">
-                                        <div class="row align-items-end">
-                                            <div class="col-lg-12">
-                                                <div class="page-header-title">
-                                                    <div class="d-inline">
-                                                        <h4><?= $title; ?></h4>
-                                                        <!-- <span><?= $subtitle; ?></span> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Page-header end -->
 
-                                    <?= $content; ?>
 
-                                </div>
+
+                                <?= $content; ?>
+
                             </div>
                             <div id="styleSelector">
                             </div>

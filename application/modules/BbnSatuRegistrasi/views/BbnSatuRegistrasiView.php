@@ -285,56 +285,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
 
-                                <div class="col-8">
-                                    <div class="form-group row mt-3 mb-1">
-                                        <div class="col-2">
-                                            <label for="userName-2" class="block"> <strong>No. Resi Pembayaran</strong></label>
-                                        </div>
-                                        <div class="col-7">
-                                            <input id="userName-2" name="userName" type="text" class="required form-control">
-                                        </div>
-
-                                        <a href="#fakelink" class="btn btn-dropbox btn btn-sm"><i class="icofont icofont-social-dropbox"></i></a>
-
-                                    </div>
-
-                                    <div class="form-group row mb-1">
-                                        <div class="col-2">
-                                            <label for="userName-2" class="block"> <strong>No. Rekom</strong></label>
-                                        </div>
-                                        <div class="col-7">
-                                            <input id="userName-2" name="userName" type="text" class="required form-control">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row mb-1">
-                                        <div class="col-2">
-                                            <button class="btn btn-inverse btn btn-sm">Ambil No. Polisi</button>
-                                        </div>
-                                        <div class="col-1">
-                                            <input id="userName-2" name="userName" type="text" class="required form-control">
-                                        </div>
-
-                                        <div class="col-2">
-                                            <input id="userName-2" name="userName" type="text" class="required form-control">
-                                        </div>
-
-                                        <div class="col-1">
-                                            <input id="userName-2" name="userName" type="text" class="required form-control">
-                                        </div>
-
-                                        <h5><label for="userName-2" class="block"> <strong>BLM TERPAKAI</strong></label></h5>
-                                    </div>
-                                </div>
-
-                                <div class="col-8">
-
-
-                                </div>
-
-                            </div>
 
                         </div>
                         <div class="tab-pane" id="profile1" role="tabpanel">
@@ -347,6 +298,59 @@
                             <p class="m-0">4.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor interdum praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et imperdiet felis amet.</p>
                         </div>
                     </div>
+
+                    <div class="row">
+
+                        <div class="col-8">
+                            <div class="form-group row mt-3 mb-1">
+                                <div class="col-2">
+                                    <label for="userName-2" class="block"> <strong>No. Resi Pembayaran</strong></label>
+                                </div>
+                                <div class="col-7">
+                                    <input id="userName-2" name="userName" type="text" class="required form-control">
+                                </div>
+
+                                <a href="#fakelink" class="btn btn-dropbox btn btn-sm"><i class="icofont icofont-social-dropbox"></i></a>
+
+                            </div>
+
+                            <div class="form-group row mb-1">
+                                <div class="col-2">
+                                    <label for="userName-2" class="block"> <strong>No. Rekom</strong></label>
+                                </div>
+                                <div class="col-7">
+                                    <input id="userName-2" name="userName" type="text" class="required form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-1">
+                                <div class="col-2">
+                                    <button class="btn btn-inverse btn btn-sm">Ambil No. Polisi</button>
+                                </div>
+                                <div class="col-1">
+                                    <input id="userName-2" name="userName" type="text" class="required form-control">
+                                </div>
+
+                                <div class="col-2">
+                                    <input id="userName-2" name="userName" type="text" class="required form-control">
+                                </div>
+
+                                <div class="col-1">
+                                    <input id="userName-2" name="userName" type="text" class="required form-control">
+                                </div>
+
+                                <h5><label for="userName-2" class="block"> <strong>BLM TERPAKAI</strong></label></h5>
+                            </div>
+                        </div>
+
+                        <div class="col-8">
+
+
+                        </div>
+
+                    </div>
+
+
                 </div>
             </div>
             <!-- /.container-fluid -->
