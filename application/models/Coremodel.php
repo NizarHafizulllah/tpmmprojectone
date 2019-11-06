@@ -9,4 +9,8 @@ class Coremodel extends CI_Model
         
         return $query;
     }
+
+    function get_menu(){
+    	print_r($this->userdata);
+    }
 }
