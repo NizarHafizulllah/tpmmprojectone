@@ -84,7 +84,6 @@
                                             <label class="block">No. BPKB</label>
                                             <input id="userName-2" name="userName" type="text" class="required form-control">
                                         </div>
-
                                         <div class="form-group row">
                                             <label for="userName-2" class="block">Dikeluarkan di</label>
                                             <input id="userName-2" name="userName" type="text" class="required form-control">
