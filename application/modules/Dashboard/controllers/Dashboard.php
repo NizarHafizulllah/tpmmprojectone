@@ -11,7 +11,7 @@ class Dashboard extends AdminController
 
 	public function index()
 	{
-		// show_array($this->userdata);
+		// show_array($this->u`serdata);
 		$data = array();
 		$data['title'] = "Dashboard";
 		$content = $this->load->view($this->controller . "View", $data, true);

@@ -63,6 +63,28 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs  tabs" role="tablist">
                         <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#kendaraan" role="tab">I. Identitas Kendaraan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#pemilik" role="tab">II. Identitas Pemilik</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#messages1" role="tab">III. Identitas Pabean / Asal Usul</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content tabs card-block">
+                        <div class="tab-pane active" id="kendaraan" role="tabpanel">
+                            dskfjksdjfksjd
+                        </div>
+                    </div>
+                    <div class="tab-content tabs card-block">
+                        <div class="tab-pane" id="pemilik" role="tabpanel">
+                            12334534
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-tabs  tabs" role="tablist">
+                        <li class="nav-item">
                             <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">I. Identitas Kendaraan</a>
                         </li>
                         <li class="nav-item">

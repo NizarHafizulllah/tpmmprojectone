@@ -115,15 +115,12 @@
                     <div class="navbar-container container-fluid">
                         <ul class="nav-left">
                             <li class="mt-3">
-                                <!-- <a href="#!" onclick="javascript:toggleFullScreen()">
-                                    <i class="feather icon-maximize full-screen"></i>                                </a> -->
+
 
                                 <div class="d-inline">
                                     <h4><strong> <?= $title; ?></strong></h4>
                                     <!-- <span><?= $subtitle; ?></span> -->
                                 </div>
-                                </a>
-                                <?php echo $title; ?>
                                
                             </li>
                         </ul>
@@ -210,11 +207,7 @@
                         <div class="pcoded-inner-content">
                             <!-- Main-body start -->
                             <div class="main-body">
-                                <<<<<<< HEAD=======<div class="page-wrapper">
-                                    <!-- Page-header start -->
-
-                                    <!-- Page-header end -->
-                                    >>>>>>> efb3b63c64eafd58558bf21d1043d42aada00048
+                              
 
 
 
