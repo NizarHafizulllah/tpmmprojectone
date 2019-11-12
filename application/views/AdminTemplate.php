@@ -61,6 +61,20 @@
 
         gtag('config', 'UA-23581568-13');
     </script>
+
+    <style type="text/css">
+        .dua {
+            font-size: 13px;
+        }
+
+        .tiga {
+            font-size: 14px;
+        }
+
+        .placeholder_color::-webkit-input-placeholder {
+            color: #D4D5DB;
+        }
+    </style>
 </head>
 
 <body>
@@ -121,7 +135,7 @@
                                     <h4><strong> <?= $title; ?></strong></h4>
                                     <!-- <span><?= $subtitle; ?></span> -->
                                 </div>
-                               
+
                             </li>
                         </ul>
 
@@ -207,11 +221,9 @@
                         <div class="pcoded-inner-content">
                             <!-- Main-body start -->
                             <div class="main-body">
-                              
 
 
-
-                                    <?= $content; ?>
+                                <?= $content; ?>
 
                             </div>
                             <div id="styleSelector">
