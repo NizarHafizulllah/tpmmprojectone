@@ -91,15 +91,16 @@
                             <td>Edinburgh</td>
                         </tr>
                     </tbody>
-                </table>
+                   </table>
+                  </div>
+                </div>
+               </div>
             </div>
-        </div>
-    </div>
-</div>
-                    <div class="row ml-3">
-                         <div class="col-12">
-                            <button class="btn btn-inverse btn-sm btn-block tiga">SIMPAN & CETAK</button>
-                         </div>
+            
+            <div class="row ml-3">
+             <div class="col-12">
+              <button class="btn btn-inverse btn-sm btn-block tiga">SIMPAN & CETAK</button>
+            </div>
             
             
 

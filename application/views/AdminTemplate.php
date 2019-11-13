@@ -61,6 +61,20 @@
 
         gtag('config', 'UA-23581568-13');
     </script>
+
+<style type="text/css">
+        .dua {
+            font-size: 13px;
+        }
+
+        .tiga {
+            font-size: 16px;
+        }
+
+        .placeholder_color::-webkit-input-placeholder {
+            color: #D4D5DB;
+        }
+    </style>
 </head>
 
 <body>
