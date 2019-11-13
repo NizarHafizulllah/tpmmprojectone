@@ -25,6 +25,10 @@
     .sudah_proses{
         color: red;
     }
+
+    .swal2-container {
+      z-index: 999999999999;
+    }
 </style>
 <div class="page-body">
     <div class="row">
@@ -50,14 +54,14 @@
                                                 7 => "EX LUAR DAERAH / R2",
                                                 8 => "EX LUAR DAERAH / R4",
                                                 );
-                            echo form_dropdown("jenis_penerbitan",$arr_jenis,1,'id="jenis_penerbitan" class="form-control"'); ?>
+                            echo form_dropdown("jenis_penerbitan",$arr_jenis,1,'id="jenis_penerbitan" class="form-control form-control-sm"'); ?>
                         </div>
                         <div class="col-md-4 col-lg-2">
                             <label for="email-2" class="block">Wilayah Kerja</label>
                         </div>
                         <div class="col-md-8 col-lg-4">
                             <?php 
-                                echo form_dropdown("wilayah_kerja",$arr_wilayah,1,'id="wilayah_kerja" class="form-control"'); 
+                                echo form_dropdown("wilayah_kerja",$arr_wilayah,1,'id="wilayah_kerja" class="form-control form-control-sm"'); 
                             ?>
                         </div>
                     </div>
@@ -77,9 +81,9 @@
                         </div>
                         <div class="col-md-8 col-lg-6">
                              <div class="input-daterange input-group tanggalspan mb-1">
-                                <input type="text" class="input-sm form-control tanggal" id="CrTanggalAwal" value="<?php echo date('d/m/Y'); ?>" name="CrTanggalAwal" placeholder="Tanggal Awal" >
+                                <input type="text" class="input-sm form-control tanggal form-control-sm" id="CrTanggalAwal" value="<?php echo date('d/m/Y'); ?>" name="CrTanggalAwal" placeholder="Tanggal Awal" >
                                 <span class="input-group-addon">s/d</span>
-                                <input type="text" class="input-sm form-control tanggal" id="CrTanggalAkhir" name="CrTanggalAkhir" placeholder="Tanggal Akhir" value="<?php echo date('d/m/Y'); ?>">
+                                <input type="text" class="input-sm form-control tanggal form-control-sm" id="CrTanggalAkhir" name="CrTanggalAkhir" placeholder="Tanggal Akhir" value="<?php echo date('d/m/Y'); ?>">
                             </div>
                         </div>
                     </div>
@@ -93,9 +97,9 @@
                         </div>
                         <div class="col-md-8 col-lg-6">
                              <div class="input-daterange input-group norekspan mb-1">
-                                <input type="text" class="input-sm form-control" name="CrNoRekBPKBAwal" id="CrNoRekBPKBAwal" placeholder="No. Rek BPKB Awal">
+                                <input type="text" class="input-sm form-control form-control-sm" name="CrNoRekBPKBAwal" id="CrNoRekBPKBAwal" placeholder="No. Rek BPKB Awal">
                                 <span class="input-group-addon">s/d</span>
-                                <input type="text" class="input-sm form-control" name="CrNoRekBPKBAkhir" id="CrNoRekBPKBAkhir" placeholder="No. Rek BPKB Akhir">
+                                <input type="text" class="input-sm form-control form-control-sm" name="CrNoRekBPKBAkhir" id="CrNoRekBPKBAkhir" placeholder="No. Rek BPKB Akhir">
                             </div>
                         </div>
                     </div>
@@ -110,9 +114,9 @@
                         </div>
                         <div class="col-md-8 col-lg-6">
                              <div class="input-daterange input-group nobpkbspan mb-1">
-                                <input type="text" class="input-sm form-control" id="CrNoBPKBAwal" name="CrNoBPKBAwal" placeholder="No. BPKB Awal">
+                                <input type="text" class="input-sm form-control form-control-sm" id="CrNoBPKBAwal" name="CrNoBPKBAwal" placeholder="No. BPKB Awal">
                                 <span class="input-group-addon">s/d</span>
-                                <input type="text" class="input-sm form-control" id="CrNoBPKBAkhir" name="CrNoBPKBAkhir"  placeholder="No. BPKB Akhir">
+                                <input type="text" class="input-sm form-control form-control-sm" id="CrNoBPKBAkhir" name="CrNoBPKBAkhir"  placeholder="No. BPKB Akhir">
                             </div>
                         </div>
                     </div>
@@ -135,7 +139,7 @@
 
                     <div class="form-group row mb-2">
                         <div class="col-md-12 col-lg-12">
-                            <button class=" btn btn-inverse btn btn-sm ml-1">Buat Label</button>
+                            <button type="button" class=" btn btn-inverse btn btn-sm ml-1" data-toggle="modal" data-target="#large-Modal">Buat Label</button>
                             <button class=" btn btn-inverse btn btn-sm ml-1">Cetak Label (Kertas Letter)</button>
                               <button type="button" class="btn btn-inverse btn-sm ml-1 dropdown-toggle" data-toggle="dropdown">
                                 Cetak Label (Kertas Labbel)
@@ -185,6 +189,10 @@
     </div>
 </div>
 
+
+<?php 
+    $this->load->view($this->controller.'ModalView');
+?>
 <?php 
     $this->load->view($this->controller.'ViewJs');
 ?>

@@ -20,7 +20,7 @@ class Coremodel extends CI_Model
                 $this->db->order_by($vORDERBY);
                 $res  = $this->db->get($vTable);
        
-                $ret = array();
+                $ret = array('' => '');
                 foreach($res->result_array() as $row) : 
                         $ret[$row[$vINDEX]] = $row[$vVALUE];
                 endforeach;
@@ -41,19 +41,25 @@ class Coremodel extends CI_Model
 
 	 $string = '';
 	 $jumlah_array = count($array);
+  // echo $jumlah_array;
+  // exit();
+   $counter = 0;
 	 foreach ($array as $key => $value) {
-	 	if ($key==($jumlah_array-1)) {
+    $counter++;
+	 	if ($counter==($jumlah_array)) {
 	 		$string .= "'".$value."'";
 	 	}else{
 	 		$string .= "'".$value."', ";
+      // echo 'last data'.$key
 	 	}	
 	 }
 
+   // echo $string;
      $hasil = $this->db->query("select ".$function."(".$string.") as result from dual")->row_array();
-     $data_arr = explode('#', $hasil['RESULT']);
+     
 
    
-     return $data_arr;
+     return $hasil;
   }
 
 

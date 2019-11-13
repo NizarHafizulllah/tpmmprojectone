@@ -10,7 +10,7 @@ class AdminController extends CI_Controller
 
 			$this->db->where('KODE', $this->userdata['vl_level_akses']);
 			$res = $this->db->get('M_GROUP_SUB_MENU_APLIKASI')->result_array();
-			# code...
+			
 			$menu = array();
 			foreach ($res as $key => $value) {
 				

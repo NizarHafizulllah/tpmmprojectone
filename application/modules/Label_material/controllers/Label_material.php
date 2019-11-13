@@ -45,22 +45,21 @@ class Label_material extends AdminController
   		$this->form_validation->set_rules('CrNoBPKBAkhir', 'No BPKB Akhir ', 'required');
   }
 
+  $this->form_validation->set_message('required', ' %s Harus diisi ');
   $this->form_validation->set_error_delimiters('* ', '<br />');	
 
    if ($this->form_validation->run() == TRUE){
 
    	if ($post['jeniscari']==0) {
-   		// $timestamp = strtotime($original_date);
- 
-// Creating new date format from that timestamp
+   		
+
    		$date1 = str_replace('/', '-', $post['CrTanggalAwal']);
    		$date2 = str_replace('/', '-', $post['CrTanggalAkhir']);
 		$post['CrTanggalAwal'] = date("Ymd", strtotime($date1));
 		$post['CrTanggalAkhir'] = date("Ymd", strtotime($date2));
+
    	}
 
-
-   	// show_array($post);
 
    $v_is_get = $post['jeniscari'];              
    $v_polda_id = $this->session['vl_polda_id'];            
@@ -98,6 +97,93 @@ class Label_material extends AdminController
 	}
 		echo json_encode($arr);
 		
+	}
+
+
+	function get_noawal(){
+		$post = $this->input->post();
+
+	   $v_polda_id = $this->session['vl_polda_id']; 
+	   $v_polres_id = $post['v_wilayah_kerja']; 
+	   // $v_polres_id = $this->session['vl_polres_id'];      
+	   $v_jns_penerbitan = $post['v_jenis_penerbitan'];
+
+	    $variables[0] = array("parameter" => "p1", "value" => $v_polda_id);
+	    $variables[1] = array("parameter" => "p2", "value" => $v_polres_id);
+	    $variables[2] = array("parameter" => "p3", "value" => $v_jns_penerbitan);
+
+		$res =  $this->cm->readCursor("BPKB_GET_LAST_NUMBER_LABEL2(:p1, :p2, :p3, :refc)", $variables);
+
+		if (empty($res)) {
+			$ret = array('NO_BPKB' => '', 
+							'NREG_BPKB' => ''
+						);
+		}else{
+			$ret = $res[0]; 
+		}
+
+		echo json_encode($ret);
+
+		
+	}
+
+
+	function simpan_label(){
+		$post = $this->input->post();
+
+	$this->load->library('form_validation');
+	$this->form_validation->set_rules('v_jenis_penerbitan', 'Jenis Penerbitan', 'required');
+  	$this->form_validation->set_rules('v_wilayah_kerja', 'Wilayah Kerja ', 'required');
+  	$this->form_validation->set_rules('v_tanggal_dikeluarkan', 'Tgl Dikeluarkan', 'required');
+  	$this->form_validation->set_rules('v_jumlah_buku', 'Jumlah Buku', 'required');
+  	$this->form_validation->set_rules('v_seri_bpkb', 'Wilayah', 'required');
+
+  	if ($post['v_is_no_bpkb_null']==1) {
+  		// $post['v_is_no_bpkb_null'] = 0;
+  		$this->form_validation->set_rules('v_no_awal', 'No Awal BPKB', 'required');
+  		$this->form_validation->set_rules('v_reg_no_awal', 'No Reg BPKB Awal', 'required');
+  	}
+
+  	$this->form_validation->set_rules('v_kode_wialayah', 'Wilayah', 'required');
+  	$this->form_validation->set_rules('v_wilayah_kerja', 'Wilayah', 'required');
+  	$this->form_validation->set_rules('v_wilayah_kerja', 'Wilayah', 'required');
+
+  $this->form_validation->set_message('required', ' %s Harus diisi ');
+  $this->form_validation->set_error_delimiters('* ', '<br />');	
+
+  if ($this->form_validation->run() == TRUE){
+  		
+ $date1 = str_replace('/', '-', $post['v_tanggal_dikeluarkan']);
+$post['v_tanggal_dikeluarkan'] = date("Ymd", strtotime($date1));
+
+
+   $datanya = array(
+				"v_polda_id" => $this->session['vl_polda_id'],
+			   "v_polres_id" => $post['v_wilayah_kerja'],
+			   "v_jenis_penerbitan" =>  $post['v_jenis_penerbitan'],
+			   "v_is_no_bpkb_null" => $post['v_is_no_bpkb_null'],
+			   "v_seri_bpkb" => $post['v_seri_bpkb'],
+			   "v_kd_wil_bpkb" => $post['v_kode_wialayah'],
+			   "v_no_awal_bpkb" => $post['v_no_awal'],
+			   "v_bln_th_reg" => $post['v_bulan_tahun_bpkb'],
+			   "v_akhiran_reg" => $post['v_akhiran_reg'],
+			   "v_no_nreg_awal" => $post['v_reg_no_awal'],
+			   "v_tgl_proses" => $post['v_tanggal_dikeluarkan'],
+			   "v_jml_data" => $post['v_jumlah_buku']
+   				);
+   
+   $res = $this->cm->call_function($datanya, 'BPKB_CREATE_LABEL');
+
+   // show_array($res);
+   $arr = array("error"=>false,"message"=>$res['RESULT']);
+
+
+
+  }else{
+  	$arr = array("error"=>true,"message"=>validation_errors());
+  }
+
+		echo json_encode($arr);
 	}
 
 
