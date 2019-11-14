@@ -23,15 +23,18 @@
     <!-- feather Awesome -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\icon\feather\css\feather.css">
     <!-- Style.css -->
+     <link rel="stylesheet" href="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\select2\css\select2.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\css\style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\css\jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\scss\partials\menu\_pcmenu.htm">
+  
 
     <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery\js\jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery-ui\js\jquery-ui.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\popper.js\js\popper.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\bootstrap\js\bootstrap.min.js"></script>
     <!-- jquery slimscroll js -->
+
     <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\jquery-slimscroll\js\jquery.slimscroll.js"></script>
     <!-- modernizr js -->
     <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\modernizr\js\modernizr.js"></script>
@@ -44,13 +47,19 @@
     <script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\pcoded.min.js"></script>
     <script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\vartical-layout.min.js"></script>
     <script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/adminty'); ?>\files\bower_components\select2\js\select2.full.min.js"></script>
     <!-- Custom js -->
     <script type="text/javascript" src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\script.js"></script>
     <!-- Date-time picker css -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\pages\advance-elements\css\bootstrap-datetimepicker.css">
+    <script src="<?php echo base_url('assets/adminty/newassets'); ?>/sweetalert29.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url('assets/adminty/newassets'); ?>/bootstrap-datepicker.css"  />
+    <script src="<?php echo base_url('assets/adminty/newassets'); ?>/bootstrap-datepicker.js"></script>
+    
+    <!-- <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script> -->
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/i18n/en.js" integrity="sha256-7YaeI5VCGS/ZlBhafoThN48d8ka+vijZ7c25nnLURWQ=" crossorigin="anonymous"></script> -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    
     <script>
         window.dataLayer = window.dataLayer || [];
 

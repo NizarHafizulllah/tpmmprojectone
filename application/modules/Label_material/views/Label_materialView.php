@@ -1,7 +1,4 @@
-
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\datatables.net-bs4\css\dataTables.bootstrap4.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\pages\data-table\css\buttons.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\datatables.net-responsive-bs4\css\responsive.bootstrap4.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\css\style.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\css\jquery.mCustomScrollbar.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\datedropper\css\datedropper.min.css">
@@ -15,17 +12,11 @@
 <!-- Custom js -->
 <script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\pages\data-table\js\data-table-custom.js"></script>
 
-<script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\pcoded.min.js"></script>
-<script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\vartical-layout.min.js"></script>
-<script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\js\jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css" integrity="sha256-bLNUHzSMEvxBhoysBE7EXYlIrmo7+n7F4oJra1IgOaM=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js" integrity="sha256-JIBDRWRB0n67sjMusTy4xZ9L09V8BINF0nd/UUUOi48=" crossorigin="anonymous"></script>
 <style type="text/css">
     .sudah_proses{
         color: red;
     }
-
+    
     .swal2-container {
       z-index: 999999999999;
     }
@@ -187,12 +178,13 @@
             </div>
         </div>
     </div>
+    <?php 
+        $this->load->view($this->controller.'ModalView');
+    ?>
+    <?php 
+        $this->load->view($this->controller.'ViewJs');
+    ?>
+
 </div>
 
 
-<?php 
-    $this->load->view($this->controller.'ModalView');
-?>
-<?php 
-    $this->load->view($this->controller.'ViewJs');
-?>

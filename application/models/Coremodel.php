@@ -28,6 +28,21 @@ class Coremodel extends CI_Model
 
         }
 
+    function arr_dropdown3($vTable, $vINDEX, $vVALUE, $vORDERBY, $field, $search, $field2, $search2){
+                $this->db->select($vINDEX.', '.$vVALUE)->from($vTable);
+                $this->db->where($field, $search);
+                $this->db->where($field2, $search2);
+                $this->db->order_by($vORDERBY);
+                $res  = $this->db->get();
+       
+                $ret = array('' => '= Pilih Pemohon =');
+                foreach($res->result_array() as $row) : 
+                        $ret[$row[$vINDEX]] = $row[$vVALUE];
+                endforeach;
+                return $ret;
+
+        }
+
     function add_arr_head($arr,$index,$str) {
 	  $res[$index] = $str;
 	  foreach($arr as $x => $y) : 

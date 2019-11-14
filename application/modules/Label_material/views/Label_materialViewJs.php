@@ -67,7 +67,7 @@
 					},
 					success : function(obj){
 						if(obj.error==false) { 
-							  swal.fire('Info',obj.message,'success');
+							  swal.fire('Selesai',obj.message,'success');
 						}
 						else {
 							
@@ -114,9 +114,7 @@
 
 							  		if (item.IS_PROSES!==null) {
 							  			$(newdata).addClass('sudah_proses');					  	
-							  		}
-							            
-
+							  		}         
 							  });
 
 							  swal.close();
@@ -131,7 +129,6 @@
 							swal.fire('Error','Server Error','error');
 				    }
 				});
-			return false;
 
 		});
 
