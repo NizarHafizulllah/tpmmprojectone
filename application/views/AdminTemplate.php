@@ -121,7 +121,7 @@
                                     <h4><strong> <?= $title; ?></strong></h4>
                                     <!-- <span><?= $subtitle; ?></span> -->
                                 </div>
-                               
+
                             </li>
                         </ul>
 
@@ -207,11 +207,8 @@
                         <div class="pcoded-inner-content">
                             <!-- Main-body start -->
                             <div class="main-body">
-                              
 
-
-
-                                    <?= $content; ?>
+                                <?= $content; ?>
 
                             </div>
                             <div id="styleSelector">
