@@ -127,7 +127,6 @@
                                                 <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Tipe">
                                             </div>
 
-
                                             <div class="form-group input-group-sm row m-1">
                                                 <label for="userName-2" class="block">Tahun Buat</label>
                                                 <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Tahun Buat">
