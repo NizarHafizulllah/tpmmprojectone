@@ -102,7 +102,7 @@ class Pendaftaran_bbn_1 extends AdminController
 	function simpan(){
 		$post = $this->input->post();
 
-		// show_array($this->session);
+		// show_array($post);
 		// exit();
 
 		
@@ -121,8 +121,8 @@ class Pendaftaran_bbn_1 extends AdminController
  $date1 = str_replace('/', '-', $post['v_tanggal']);
 $post['v_tanggal'] = date("Ymd", strtotime($date1));
 
-
-   $datanya = array(
+	if (!empty($post['daftaran_id'])) {
+		$datanya = array(
 			   "vNoRangka" => $post['vNoRangka'],
 			   "vTglDaftar" =>  $post['v_tanggal'],
 			   "vNoBPKB" => '',
@@ -133,19 +133,39 @@ $post['v_tanggal'] = date("Ymd", strtotime($date1));
 			   "vEnrollmentType" => 1,
 			   "vTypeDaftaran" => $post['vTypeKendaraan'],
 			   "vMerkID" => '',
+			   "vDaftarID" => $post['daftaran_id'],
+			   "vPOLDA_ID" => $this->session['vl_polda_id'],
+			   "vPOLRES_ID" => $this->session['vl_polres_id']
    				);
-   	
-   	// $res = $this->db->query("select BPKB_PENDAFTARAN_ADD('".$datanya['vNoRangka']."', '".$datanya['vTglDaftar']."', '".$datanya['vNoBPKB']."', ".$datanya['vPemohonID'].", ".$datanya['vPetugasID'].", '".$datanya['vBarcodeBank']."', '".$datanya['vLoketNo']."', ".$datanya['vEnrollmentType'].", ".$datanya['vTypeDaftaran'].", '".$datanya['vMerkID']."') as result from dual")->row_array();
-   // show_array($hasil);
-   // exit();
 
-   $res = $this->cm->call_function($datanya, 'BPKB_PENDAFTARAN_ADD');
-   // echo $this->db->last_query();
-   // show_array($res);
-   $arr = array("error"=>false,"message"=>$res['RESULT']);
+		$res = $this->cm->call_function($datanya, 'BPKB_PENDAFTARAN_EDIT_WEB');
+	}else{
+		$datanya = array(
+			   "vNoRangka" => $post['vNoRangka'],
+			   "vTglDaftar" =>  $post['v_tanggal'],
+			   "vNoBPKB" => '',
+			   "vPemohonID" => $post['pemohon'],
+			   "vPetugasID" => $this->session['vl_op_id'],
+			   "vBarcodeBank" => $post['vBarcodeBank'],
+			   "vLoketNo" => 1,
+			   "vEnrollmentType" => 1,
+			   "vTypeDaftaran" => $post['vTypeKendaraan'],
+			   "vMerkID" => '',
+			   "vPOLDA_ID" => $this->session['vl_polda_id'],
+			   "vPOLRES_ID" => $this->session['vl_polres_id']
+   				);
 
-   // show_array($arr);
-   // exit();
+		$res = $this->cm->call_function($datanya, 'BPKB_PENDAFTARAN_ADD_WEB');
+	}
+   
+   
+   $bagi = explode('#', $res['RESULT']);
+   
+   if ($bagi[0]=='00') {
+   		 $arr = array("error"=>false,"message"=>'Berhasil Simpan');
+   }else{
+   		$arr = array("error"=>true,"message"=>$res['RESULT']);
+   }
 
   }else{
   	$arr = array("error"=>true,"message"=>validation_errors());

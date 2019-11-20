@@ -51,13 +51,13 @@
                             <div class="form-radio">
                                 <div class="radio radiofill radio-inverse radio-inline">
                                     <label>
-                                        <input type="radio" name="pemohon_jenis" value="PRIBADI" data-bv-field="pemohon_jenis" checked>
+                                        <input type="radio" name="pemohon_jenis" value="PRIBADI" id="pjPribadi" data-bv-field="pemohon_jenis" checked>
                                         <i class="helper" ></i>Pribadi
                                     </label>
                                 </div>
                                 <div class="radio radiofill radio-inverse radio-inline active">
                                     <label>
-                                        <input type="radio" name="pemohon_jenis" value="BIROJASA" data-bv-field="pemohon_jenis" >
+                                        <input type="radio" name="pemohon_jenis" value="BIROJASA" id="pjBirojasa" data-bv-field="pemohon_jenis" >
                                         <i class="helper"></i>Birojasa
                                     </label>
                                 </div>
@@ -85,15 +85,13 @@
                             <button type="button" id="btnCariServer" class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-search"></i>Tampil Data</button>
                         </div>
                     </div>
-
                     <hr>
-
                     <div class="form-group row mb-2">
                         <div class="col-md-4 col-lg-2">
                             <label for="confirm-2" class="block">No Resi Pembayaran</label>
                         </div>
                         <div class="col-md-4 col-lg-4">
-                            <input id="vBarcodeBank" name="vBarcodeBank" type="text" class="form-control required" value="XXXXX">
+                            <input id="vBarcodeBank" name="vBarcodeBank" type="text" class="form-control required">
                         </div>
                         <div class="col-md-4 col-lg-4">
                             <div class="checkbox-fade fade-in-inverse">
@@ -114,6 +112,7 @@
                             <label for="confirm-2" class="block">No Rangka</label>
                         </div>
                         <div class="col-md-8 col-lg-4">
+                            <input type="hidden" name="daftaran_id" id="daftaran_id" >
                             <input id="vNoRangka" name="vNoRangka" type="text" class="form-control required">
                         </div>
                     </div>
@@ -123,7 +122,7 @@
                             <label for="userName-2" class="block"></label>
                         </div>
                         <div class="col-md-8 col-lg-10">
-                            <button type="button" class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-ui-add"></i>Baru</button>
+                            <button type="button" onclick="reset_form()" class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-ui-add"></i>Baru</button>
                             <button type="button" id="btnSimpan" class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-save"></i>Simpan</button>
                             <button type="button" class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-trash"></i>Hapus</button>
                             <button type="button" class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-print"></i>Cetak</button>

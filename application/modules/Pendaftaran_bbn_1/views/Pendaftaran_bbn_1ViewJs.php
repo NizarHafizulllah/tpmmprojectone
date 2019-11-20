@@ -60,7 +60,7 @@
 							  obj.data.forEach(function(item, index){
 
 							  	var newdata = prntTable.row.add([
-							  		'<button class="btn btn-danger btn-sm" onclick="hapus_data(\''+item.DAFT_ID+'\')" type="button"><i class="fa fa-trash"></i></button> <button class="btn btn-primary btn-sm" onclick="update(\''+item.DAFT_ID+'\')" type="button"><i class="fa fa-pencil"></i></button>',
+							  		'<button class="btn btn-danger btn-sm" onclick="hapus_data(\''+item.DAFT_ID+'\')" type="button"><i class="fa fa-trash"></i></button> <button class="btn btn-primary btn-sm" onclick="edit_data([\''+item.BARCODE+'\',\''+item.DAFT_ID+'\',\''+item.DIPLOMAT+'\',\''+item.NO_BPKB+'\',\''+item.NO_FAKTUR+'\',\''+item.NO_RANGKA+'\',\''+item.PEMOHON_ID+'\',\''+item.PEMOHON_JENIS+'\',\''+item.SUDAH_DIPROSES+'\',\''+item.TGL_DAFTAR+'\',\''+item.TIPE_DAFTARAN+'\' ])" type="button"><i class="fa fa-pencil"></i></button>',
 									item.NO_BPKB, 
 									item.NO_RANGKA,
 									item.NO_FAKTUR,
@@ -114,6 +114,10 @@
 							  	text : obj.message,
 							  	type : 'success'
 							  }).then(function() {
+							  	$('#vBarcodeBank').val('');
+								$('#vNoRangka').val('');
+								$('#daftaran_id').val('');
+								$('#checkbox').prop('checked', false);
 							  	$('#btnCariServer').click();
 							  });
 							  
@@ -134,6 +138,45 @@
 
 		
 	});
+
+
+	function edit_data(arr){
+
+
+
+		$('#vBarcodeBank').val(arr[0]);
+		$('#vNoRangka').val(arr[5]);
+		$('#daftaran_id').val(arr[1]);
+
+
+		if (arr[2]==1) {
+			$('#checkbox').prop('checked', true);
+		}else{
+			$('#checkbox').prop('checked', false);
+		}
+
+		
+		if (arr[7]=="PRIBADI") {
+			if($('#pjPribadi').is(':checked')) { 
+				$('#pemohon').val(arr[6]).trigger('change');
+			 }else{
+				$("#pjPribadi").prop('checked', true);
+				get_pemohon('PRIBADI', arr[6]);
+				
+
+			 }
+		}else{
+			if($('#pjPribadi').is(':checked')) {
+				$('#pemohon').val(arr[6]).trigger('change');
+			}else{
+				$("#pjBirojasa").prop('checked', true);
+				get_pemohon('BIROJASA', arr[6]);
+			}
+			
+		}
+		
+		
+	}
 
 
 	function hapus_data(DAFT_ID){
@@ -184,6 +227,39 @@
 		      swal("Dibatalkan", "Data anda tidak jadi dihapus", "error");
 		    }
 		 });
+	}
+
+
+	function get_pemohon(pemohon, value){
+		$.ajax({
+					url : '<?php echo site_url($this->controller."/get_pemohon") ?>',
+					data : { pemohon_jenis : pemohon },
+					type : 'post',
+					beforeSend : function(){
+						swal.fire({
+									title: 'Reload Data . . ',
+								    allowEscapeKey: false,
+								    allowOutsideClick: false,
+								});
+						      swal.showLoading();
+					},
+					success : function(obj){
+						swal.close();
+						$("#pemohon").html(obj);
+						$('#pemohon').val(value).trigger('change');
+					},
+					error: function(){
+						swal.fire('Error','Server Error','error');
+				    }
+				});
+	}
+
+
+	function reset_form(){
+		$('#vBarcodeBank').val('');
+		$('#vNoRangka').val('');
+		$('#daftaran_id').val('');
+		$('#checkbox').prop('checked', false);
 	}
 
 </script>
