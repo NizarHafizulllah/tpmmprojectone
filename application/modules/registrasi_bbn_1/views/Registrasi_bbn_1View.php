@@ -18,7 +18,6 @@
 
                     <div class="tab-content tabs card-block">
 
-
                         <div class="tab-pane active" id="entri_data_bpkb" role="tabpanel">
 
                             <div class="row">
