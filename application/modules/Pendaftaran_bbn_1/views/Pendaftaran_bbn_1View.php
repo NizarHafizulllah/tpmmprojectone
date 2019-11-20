@@ -1,18 +1,49 @@
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\pages\data-table\css\buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\css\style.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\css\jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\datedropper\css\datedropper.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
+
+<script src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\datatables.net\js\jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\datatables.net-buttons\js\dataTables.buttons.min.js"></script>
+
+<script src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\datatables.net-bs4\js\dataTables.bootstrap4.min.js"></script>
+<script src="<?php echo base_url('assets/adminty/'); ?>\files\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js"></script>
+<!-- Custom js -->
+<script src="<?php echo base_url('assets/adminty/'); ?>\files\assets\pages\data-table\js\data-table-custom.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.6.4/jquery.contextMenu.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\icon\font-awesome\css\font-awesome.min.css">
+<style type="text/css">
+    
+    #select2-pemohon-container{
+        padding: 2px 2px 2px 4px;
+    }
+    .select2-selection__arrow{
+        top: 4px;
+    }
+    #context-menu-layer{
+        z-index: 999999999;
+    }
+
+
+</style>
 <div class="page-body">
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-block">
-                    <div class="form-group row mb-2">
+                    <form id="form_data">
+                    <div class="form-group row mb-1">
                         <div class="col-md-4 col-lg-2">
                             <label for="userName-2" class="block">Tanggal</label>
                         </div>
                         <div class="col-md-8 col-lg-4">
-                            <input id="userName-2" name="userName" type="text" class="required form-control">
+                            <input id="v_tanggal" name="v_tanggal" type="text" class="required form-control form-control-sm tanggal" value="<?php echo date('d/m/Y'); ?>" placeholder="Tanggal">
                         </div>
                     </div>
 
-                    <div class="form-group row mb-2">
+                    <div class="form-group row mb-1">
                         <div class="col-md-4 col-lg-2">
                             <label for="email-2" class="block">Jenis Pemohon</label>
                         </div>
@@ -20,13 +51,13 @@
                             <div class="form-radio">
                                 <div class="radio radiofill radio-inverse radio-inline">
                                     <label>
-                                        <input type="radio" name="member" value="free" data-bv-field="member">
-                                        <i class="helper"></i>Pribadi
+                                        <input type="radio" name="pemohon_jenis" value="PRIBADI" id="pjPribadi" data-bv-field="pemohon_jenis" checked>
+                                        <i class="helper" ></i>Pribadi
                                     </label>
                                 </div>
                                 <div class="radio radiofill radio-inverse radio-inline active">
                                     <label>
-                                        <input type="radio" name="member" value="personal" data-bv-field="member">
+                                        <input type="radio" name="pemohon_jenis" value="BIROJASA" id="pjBirojasa" data-bv-field="pemohon_jenis" >
                                         <i class="helper"></i>Birojasa
                                     </label>
                                 </div>
@@ -34,45 +65,39 @@
                         </div>
                     </div>
 
-                    <div class="form-group row mb-2">
+                    <div class="form-group row mb-1">
                         <div class="col-md-4 col-lg-2">
                             <label for="email-2" class="block">Pemohon</label>
                         </div>
-                        <div class="col-sm-4">
-                            <select id="" class="form-control">
-                                <option value="">- Pilih -</option>
-                                <option value="cheese">Cheese</option>
-                                <option value="h">Hanry Die</option>
-                                <option value="c">Come Leo</option>
-                                <option value="h">Hampri Catlin</option>
-                            </select>
+
+                        <div class="col-md-8 col-lg-4">
+                            <?php echo form_dropdown("pemohon",$arr_pemohon,'','id="pemohon" class="form-control form-control-sm m-1"'); ?> 
                         </div>
                         <button class="btn btn-inverse btn btn-sm"><i class="icofont icofont-refresh"></i></button>
                         <button onclick="window.open='BbnSatuDataPemohon'" class=" btn btn-inverse btn btn-sm ml-1 waves-effect"><i class="icofont icofont-ui-add"></i></button>
                     </div>
 
-                    <div class="form-group row mb-2">
+                    <div class="form-group row mb-1">
                         <div class="col-md-4 col-lg-2">
                             <label for="userName-2" class="block"></label>
                         </div>
                         <div class="col-md-8 col-lg-4">
-                            <button class=" btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-search"></i>Tampil Data</button>
+                            <button type="button" id="btnCariServer" class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-search"></i>Tampil Data</button>
                         </div>
                     </div>
-
                     <hr>
-
                     <div class="form-group row mb-2">
                         <div class="col-md-4 col-lg-2">
                             <label for="confirm-2" class="block">No Resi Pembayaran</label>
                         </div>
                         <div class="col-md-4 col-lg-4">
-                            <input id="confirm-2" name="confirm" type="text" class="form-control required">
+                            <input id="vBarcodeBank" name="vBarcodeBank" type="text" class="form-control required">
                         </div>
                         <div class="col-md-4 col-lg-4">
                             <div class="checkbox-fade fade-in-inverse">
                                 <label>
-                                    <input type="checkbox" id="checkbox" name="Language" value="HTML">
+                                    <input type="hidden" name="vTypeKendaraan" value="0">
+                                    <input type="checkbox" id="checkbox" name="vTypeKendaraan" value="1">
                                     <span class="cr">
                                         <i class="cr-icon icofont icofont-ui-check txt-inverse"></i>
                                     </span>
@@ -87,7 +112,8 @@
                             <label for="confirm-2" class="block">No Rangka</label>
                         </div>
                         <div class="col-md-8 col-lg-4">
-                            <input id="confirm-2" name="confirm" type="text" class="form-control required">
+                            <input type="hidden" name="daftaran_id" id="daftaran_id" >
+                            <input id="vNoRangka" name="vNoRangka" type="text" class="form-control required">
                         </div>
                     </div>
 
@@ -96,13 +122,14 @@
                             <label for="userName-2" class="block"></label>
                         </div>
                         <div class="col-md-8 col-lg-10">
-                            <button class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-ui-add"></i>Baru</button>
-                            <button class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-save"></i>Simpan</button>
-                            <button class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-trash"></i>Hapus</button>
-                            <button class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-print"></i>Cetak</button>
+                            <button type="button" onclick="reset_form()" class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-ui-add"></i>Baru</button>
+                            <button type="button" id="btnSimpan" class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-save"></i>Simpan</button>
+                            <button type="button" class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-trash"></i>Hapus</button>
+                            <button type="button" class="btn btn-inverse btn btn-sm ml-1"><i class="icofont icofont-print"></i>Cetak</button>
                         </div>
                     </div>
 
+                    </form>
                 </div>
             </div>
         </div>
@@ -111,53 +138,27 @@
     <div class="card">
         <div class="card-block">
             <div class="dt-responsive table-responsive">
-                <table id="multi-colum-dt" class="table table-striped table-bordered nowrap">
+                <table id="mytable" class="table table-striped table-bordered nowrap">
                     <thead>
                         <tr>
-                            <th> ID</th>
-                            <th>Register</th>
-                            <th>Nama</th>
-                            <th>Alamat</th>
-                            <th>Telp</th>
-                            <th>HP</th>
+                            <th>#</th>
+                            <th>NO BPKB</th>
+                            <th>NO RANGKA</th>
+                            <th>NO FAKTUR</th>
+                            <th>BARCODE</th>
+                            <th>PEMOHON</th>
+                            <th>DIPLOMAT</th>
+                            <th>PROSES</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
-                        </tr>
-                        <tr>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011/07/25</td>
-                            <td>$170,750</td>
-                        </tr>
-                        <tr>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009/01/12</td>
-                            <td>$86,000</td>
-                        </tr>
-                        <tr>
-                            <td>Cedric Kelly</td>
-                            <td>Senior Javascript Developer</td>
-                            <td>Edinburgh</td>
-                            <td>22</td>
-                            <td>2012/03/29</td>
-                            <td>$433,060</td>
-                        </tr>
-                    </tbody>
+                    
                 </table>
             </div>
         </div>
     </div>
 </div>
+
+
+<?php
+    $this->load->view($this->controller.'ViewJs');
+ ?>

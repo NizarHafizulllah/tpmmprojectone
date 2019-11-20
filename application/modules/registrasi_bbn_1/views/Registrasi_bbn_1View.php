@@ -6,15 +6,18 @@
                 <div class="card-block">
 
                     <ul class="nav nav-tabs tabs" role="tablists">
+
                         <li class="nav-item">
                             <a class="nav-link active" data-toggle="tab" href="#entri_data_bpkb" role="tab">Entri Data BPKB</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#list_data" role="tab">List Data</a>
                         </li>
                     </ul>
 
                     <div class="tab-content tabs card-block">
+
 
                         <div class="tab-pane active" id="entri_data_bpkb" role="tabpanel">
 
@@ -49,6 +52,7 @@
                                                     <input type="radio" class="form-check-input" name="optradio"> No. Reg BPKB
                                                 </label>
                                             </div>
+
                                         </div>
                                         <div class="col-sm-5">
                                             <input id="confirm-2" name="confirm" type="text" class="form-control required" placeholder="No. Rek BPKB">
@@ -62,6 +66,7 @@
                                                     <input type="radio" class="form-check-input" name="optradio"> Barcode Berkas
                                                 </label>
                                             </div>
+
                                         </div>
                                         <div class="col-sm-5">
                                             <input id="confirm-2" name="confirm" type="text " class="form-control required" placeholder="Barcode Berkas">
@@ -161,6 +166,7 @@
                                                 <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Rangka">
                                             </div>
 
+
                                             <div class="form-group input-group-sm row m-1">
                                                 <label for="userName-2" class="block">Jenis</label>
                                                 <div class="input-group input-group-sm mb-0">
@@ -176,6 +182,7 @@
                                                     </span>
                                                 </div>
                                             </div>
+
 
                                             <div class="form-group input-group-sm row m-1">
                                                 <label for="userName-2" class="block">Tipe 2</label>
@@ -300,6 +307,7 @@
                                                 </div>
                                             </div>
 
+
                                             <div class="form-group input-group-sm row m-1">
                                                 <label for="userName-2" class="block">Wilayah / Polres</label>
                                                 <div class="input-group input-group-sm mb-0">
@@ -315,6 +323,7 @@
                                                     </span>
                                                 </div>
                                             </div>
+
 
                                         </div>
 
@@ -607,11 +616,14 @@
                                 </table>
                             </div>
 
+
                         </div>
 
                     </div>
 
+
                 </div>
+
 
             </div>
         </div>
