@@ -4,23 +4,38 @@
             <div class="card">
 
                 <div class="card-block">
+<<<<<<< Updated upstream
 
                     <ul class="nav nav-tabs tabs" role="tablists">
 
                         <li class="nav-item">
                             <a class="nav-link active" data-toggle="tab" href="#entri_data_bpkb" role="tab">Entri Data BPKB</a>
                         </li>
+=======
+>>>>>>> Stashed changes
 
+                    <ul class="nav nav-tabs tabs" role="tablists">
                         <li class="nav-item">
+<<<<<<< Updated upstream
+=======
+                            <a class="nav-link active" data-toggle="tab" href="#entri_data_bpkb" role="tab">Entri Data BPKB</a>
+                        </li>
+                        <li class="nav-item">
+>>>>>>> Stashed changes
                             <a class="nav-link" data-toggle="tab" href="#list_data" role="tab">List Data</a>
                         </li>
                     </ul>
 
                     <div class="tab-content tabs card-block">
 
+<<<<<<< Updated upstream
 
                         <div class="tab-pane active" id="entri_data_bpkb" role="tabpanel">
 
+=======
+                        <div class="tab-pane active" id="entri_data_bpkb" role="tabpanel">
+
+>>>>>>> Stashed changes
                             <div class="row">
                                 <div class="col-3">
                                     <div class="form-group">
@@ -52,11 +67,18 @@
                                                     <input type="radio" class="form-check-input" name="optradio"> No. Reg BPKB
                                                 </label>
                                             </div>
+<<<<<<< Updated upstream
 
                                         </div>
                                         <div class="col-sm-5">
                                             <input id="confirm-2" name="confirm" type="text" class="form-control required" placeholder="No. Rek BPKB">
                                         </div>
+=======
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <input id="confirm-2" name="confirm" type="text" class="form-control required" placeholder="No. Rek BPKB">
+                                        </div>
+>>>>>>> Stashed changes
                                     </div>
 
                                     <div class="form row mb-2">
@@ -66,6 +88,7 @@
                                                     <input type="radio" class="form-check-input" name="optradio"> Barcode Berkas
                                                 </label>
                                             </div>
+<<<<<<< Updated upstream
 
                                         </div>
                                         <div class="col-sm-5">
@@ -74,6 +97,15 @@
                                         <div class="col-sm-4">
                                             <button type="button" class="btn btn-primary btn-sm waves-effect waves-light btn-block"><i class="icofont icofont-search"></i> Cari Data</button>
                                         </div>
+=======
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <input id="confirm-2" name="confirm" type="text " class="form-control required" placeholder="Barcode Berkas">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light btn-block"><i class="icofont icofont-search"></i> Cari Data</button>
+                                        </div>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
                             </div>
@@ -132,6 +164,10 @@
                                                 <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Tipe">
                                             </div>
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
                                             <div class="form-group input-group-sm row m-1">
                                                 <label for="userName-2" class="block">Tahun Buat</label>
                                                 <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Tahun Buat">
@@ -166,7 +202,10 @@
                                                 <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Rangka">
                                             </div>
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
                                             <div class="form-group input-group-sm row m-1">
                                                 <label for="userName-2" class="block">Jenis</label>
                                                 <div class="input-group input-group-sm mb-0">
@@ -183,7 +222,10 @@
                                                 </div>
                                             </div>
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
                                             <div class="form-group input-group-sm row m-1">
                                                 <label for="userName-2" class="block">Tipe 2</label>
                                                 <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Tipe">
@@ -307,7 +349,10 @@
                                                 </div>
                                             </div>
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
                                             <div class="form-group input-group-sm row m-1">
                                                 <label for="userName-2" class="block">Wilayah / Polres</label>
                                                 <div class="input-group input-group-sm mb-0">
@@ -324,6 +369,7 @@
                                                 </div>
                                             </div>
 
+<<<<<<< Updated upstream
 
                                         </div>
 
@@ -345,6 +391,28 @@
                                             </div>
 
                                             <div class="form-group input-group-sm row m-1">
+=======
+                                        </div>
+
+                                        <div class="col-md-4">
+
+                                            <div class="form-group input-group-sm row m-1">
+                                                <label class="block">Set Data Kelurahan</label>
+                                                <button class="btn btn-primary btn-block btn-sm"><i class="icofont icofont-search"></i>Set Data Kelurahan</button>
+                                            </div>
+
+                                            <div class="form-group input-group-sm row m-1">
+                                                <label class="block">Provinsi</label>
+                                                <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Provinsi">
+                                            </div>
+
+                                            <div class="form-group input-group-sm row m-1">
+                                                <label class="block">Kabupaten</label>
+                                                <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Kabupaten">
+                                            </div>
+
+                                            <div class="form-group input-group-sm row m-1">
+>>>>>>> Stashed changes
                                                 <label class="block">Kecamatan</label>
                                                 <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Kecamatan">
                                             </div>
@@ -497,12 +565,21 @@
                                     </div>
                                 </div>
                             </div>
+<<<<<<< Updated upstream
 
                             <div class="row">
                                 <div class="col-sm-2 mb-2">
                                     <label for="email-2" class=""> <strong>No. Rekom</strong></label>
                                 </div>
 
+=======
+
+                            <div class="row">
+                                <div class="col-sm-2 mb-2">
+                                    <label for="email-2" class=""> <strong>No. Rekom</strong></label>
+                                </div>
+
+>>>>>>> Stashed changes
                                 <div class="col-sm-4 mb-2">
                                     <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Rekom">
                                 </div>
@@ -512,6 +589,13 @@
                                 <div class="col-sm-2 mb-2">
                                     <button class="btn btn-primary btn btn-sm btn-block"><i class="icofont icofont-refresh"></i>Ambil No. Polisi</button>
                                 </div>
+<<<<<<< Updated upstream
+
+                                <div class="col-sm-1">
+                                    <input id="userName-2" name="userName" type="text" class="required form-control form-control-uppercase form-control-center form-control-bold">
+                                </div>
+=======
+>>>>>>> Stashed changes
 
                                 <div class="col-sm-1">
                                     <input id="userName-2" name="userName" type="text" class="required form-control form-control-uppercase form-control-center form-control-bold">
@@ -521,10 +605,13 @@
                                     <input id="userName-2" name="userName" type="text" class="required form-control form-control-uppercase form-control-center form-control-bold">
                                 </div>
 
+<<<<<<< Updated upstream
+=======
                                 <div class="col-sm-1">
                                     <input id="userName-2" name="userName" type="text" class="required form-control form-control-uppercase form-control-center form-control-bold">
                                 </div>
 
+>>>>>>> Stashed changes
                                 <div class="col-sm-2">
                                     <label for="email-2" class="form-control form-control-center"><strong>BLM TERPAKAI</strong></label>
                                 </div>
@@ -540,6 +627,7 @@
                         </div>
 
                         <div class="tab-pane" id="list_data" role="tabpanel">
+<<<<<<< Updated upstream
 
                             <div class="row">
                                 <div class="col-sm-2 mb-2">
@@ -565,6 +653,33 @@
                                         </label>
                                     </div>
                                 </div>
+=======
+
+                            <div class="row">
+                                <div class="col-sm-2 mb-2">
+                                    <label for="userName-2" class="block">Tanggal BPKB</label>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <input id="userName-2" name="userName" type="text" class="required form-control form-control-uppercase form-control-center form-control-bold">
+                                </div>
+
+                                <div class="col-2">
+                                    <button class="btn btn-primary btn btn-sm btn-block"><i class="icofont icofont-social-cloudapp"></i>Ambil Data Server</button>
+                                </div>
+
+                                <div class="col-sm-2 text-left">
+                                    <div class="checkbox-fade fade-in-primary">
+                                        <label>
+                                            <input type="checkbox" id="checkbox" name="Language" value="HTML">
+                                            <span class="cr">
+                                                <i class="cr-icon icofont icofont-ui-check txt-inverse"></i>
+                                            </span>
+                                            <span>Tampilkan Semua</span>
+                                        </label>
+                                    </div>
+                                </div>
+>>>>>>> Stashed changes
                             </div>
 
                             <div class="dt-responsive table-responsive mt-2">
@@ -615,16 +730,25 @@
                                     </tbody>
                                 </table>
                             </div>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
                         </div>
 
                     </div>
+<<<<<<< Updated upstream
 
 
                 </div>
 
 
+=======
+
+                </div>
+
+>>>>>>> Stashed changes
             </div>
         </div>
     </div>
