@@ -3,13 +3,7 @@
 
 		$('#loginbtn').click(function(){
 
-			window.swal({
-                    title: "Proses...",
-                    text: "Mohon Tunggu",
-                    imageUrl: "<?php echo base_url('assets/images/ajax-loader.gif') ?> ",
-                    showConfirmButton: false,
-                    allowOutsideClick: false
-                  });
+			
 
 			$.ajax({
 			url : '<?php echo site_url("$this->controller/cek_login") ?>',
@@ -18,17 +12,30 @@
 	        processData: false,
 	        type : 'post',
 	        dataType : 'json',
+	        beforeSend: function(){
+	        	swal.fire({
+									title: 'Autentikasi . . ',
+								    allowEscapeKey: false,
+								    allowOutsideClick: false,
+								});
+						      swal.showLoading();
+	        },
 			success : function(obj){
 				if(obj.error==false) {
-						window.swal("Informasi!", obj.message, "success").then((value) => {
+						swal.fire("Informasi!", obj.message, "success").then((value) => {
 								window.location = "<?php echo site_url('Dashboard') ?>";
 							});
 					}
 					else {
-						window.swal('Error', obj.message, 'error');
+						swal.fire('Error', obj.message, 'error');
 					}
+				},
+				error: function(){
+					swal.fire('Error', 'Server Error', 'error');
 				}
 			});
+
+			return false;
 		});
 
 	});

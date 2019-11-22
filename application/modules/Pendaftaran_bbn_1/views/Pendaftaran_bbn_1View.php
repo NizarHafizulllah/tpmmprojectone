@@ -1,3 +1,61 @@
+<div class="m-portlet m-portlet--mobile">
+                            <div class="m-portlet__head">
+                                <div class="m-portlet__head-caption">
+                                    <div class="m-portlet__head-title">
+                                        <h3 class="m-portlet__head-text">
+                                            Individual Column Search
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="m-portlet__head-tools">
+                                    <ul class="m-portlet__nav">
+                                        <li class="m-portlet__nav-item">
+                                            <a href="#" class="btn btn-primary m-btn m-btn--pill m-btn--custom m-btn--icon m-btn--air">
+                                                <span>
+                                                    <i class="la la-cart-plus"></i>
+                                                    <span>New Order</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="m-portlet__body">
+
+                                <!--begin: Datatable -->
+                                <table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
+                                    <thead>
+                                        <tr>
+                                            <th>Record ID</th>
+                                            <th>Order ID</th>
+                                            <th>Country</th>
+                                            <th>Ship City</th>
+                                            <th>Company Agent</th>
+                                            <th>Ship Date</th>
+                                            <th>Status</th>
+                                            <th>Type</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Record ID</th>
+                                            <th>Order ID</th>
+                                            <th>Country</th>
+                                            <th>Ship City</th>
+                                            <th>Company Agent</th>
+                                            <th>Ship Date</th>
+                                            <th>Status</th>
+                                            <th>Type</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+
+
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\pages\data-table\css\buttons.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\css\style.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/adminty/'); ?>\files\assets\css\jquery.mCustomScrollbar.css">

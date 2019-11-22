@@ -50,6 +50,6 @@ class AdminController extends CI_Controller
 
 	function render()
 	{
-		$this->load->view("AdminTemplate", $this->content);
+		$this->load->view("NewAdminTemplate", $this->content);
 	}
 }

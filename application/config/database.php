@@ -77,8 +77,9 @@ $tnsname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 180.250.16.227)(PO
         (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = ORA11G.HOME.COM)))';
 
 $db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => $tnsname,
+	'dsn' => $tnsname,
+	// 'dsn'	=> 'oci:dbname=180.250.16.227:1521/ORA11G.HOME.COM',
+	// 'hostname' => '',
 	'username' => 'DBSIFIK_MKS', //'nizar',
 	'password' => 'p1k1r3ndh3w3', //'bukanrahasia',
 	'database' => '',

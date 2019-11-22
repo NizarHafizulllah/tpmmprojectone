@@ -18,8 +18,7 @@ class Login extends CI_Controller
 	function cek_login(){
 		$post = $this->input->post();
 		$return = $this->dm->cek_login($post);
-		// print_r($return);
-
+		
 		if ($return[0]=='00') {
 			$data_session = explode('|', $return[1]);
 			
