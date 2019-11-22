@@ -1,13 +1,3 @@
-<style>
-    .btn-lg {
-        font-size: 14px;
-    }
-
-    .btn-sm {
-        font-size: 12px;
-    }
-</style>
-
 <div class="page-body">
     <div class="row">
         <div class="col-sm-12">
