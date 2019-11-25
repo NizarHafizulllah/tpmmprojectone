@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<<<<<<< HEAD
+=======
+<!-- begin::Head -->
+>>>>>>> parent of 0c91c7a... revert
 
 <head>
 	<meta charset="utf-8" />
@@ -25,6 +29,22 @@
 	<link href="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
 	<link href="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 	<link rel="shortcut icon" href="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/media/img/logo/favicon.ico" />
+
+
+	<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+
+		<!--end::Global Theme Bundle -->
+
+		<!--begin::Page Vendors -->
+		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+
+		<!--end::Page Vendors -->
+
+		<!--begin::Page Scripts -->
+		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/custom/crud/datatables/search-options/column-search.js" type="text/javascript"></script>
+
+		<script src="<?php echo base_url('assets/adminty/newassets'); ?>/sweetalert29.js"></script>
 </head>
 
 
@@ -247,22 +267,18 @@
 
 		<!-- begin::Quick Nav -->
 		
-
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".tanggal").datepicker({
+					format: 'dd/mm/yyyy',
+				});
+				$('.drpdwn').select2();
+			});
+		</script>
 		<!-- begin::Quick Nav -->
 
 		<!--begin::Global Theme Bundle -->
-		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
-
-		<!--end::Global Theme Bundle -->
-
-		<!--begin::Page Vendors -->
-		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-
-		<!--end::Page Vendors -->
-
-		<!--begin::Page Scripts -->
-		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/custom/crud/datatables/search-options/column-search.js" type="text/javascript"></script>
+		
 
 <!-- end::Body -->
 

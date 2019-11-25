@@ -55,10 +55,6 @@
     <script src="<?php echo base_url('assets/adminty/newassets'); ?>/sweetalert29.js"></script>
     <link rel="stylesheet" href="<?php echo base_url('assets/adminty/newassets'); ?>/bootstrap-datepicker.css" />
     <script src="<?php echo base_url('assets/adminty/newassets'); ?>/bootstrap-datepicker.js"></script>
-<<<<<<< HEAD
-=======
-    
->>>>>>> parent of d596a77... rubah form label material dan pendaftaran
     <!-- <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script> -->
     <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/i18n/en.js" integrity="sha256-7YaeI5VCGS/ZlBhafoThN48d8ka+vijZ7c25nnLURWQ=" crossorigin="anonymous"></script> -->
 
