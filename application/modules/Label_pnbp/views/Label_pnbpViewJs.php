@@ -3,7 +3,9 @@
 
 	$(document).ready(function(){
 
-		
+		$(".tanggal").datepicker({
+			format: 'dd/mm/yyyy',
+		});
 
 
 		$('.tanggalspan').on("click", function(){
@@ -17,9 +19,6 @@
 		$('.nobpkbspan').on("click", function(){
 			$("#jeniscari2").prop("checked", true);
 		});
-
-
-		
 
 		var prntTable = $('#mytable').DataTable();
 

@@ -13,8 +13,8 @@
 
                     <div class="row m-0">
                         <div class="col-sm-12 mb-1">
-                             <div class="m-portlet m-portlet--mobile">
-                                <div class="m-portlet__body">
+                            <div class="card m-0">
+                                <div class="card-block">
                                     
                                         <div class="form-group row mb-1">
                                             <div class="col-md-4 col-lg-3">

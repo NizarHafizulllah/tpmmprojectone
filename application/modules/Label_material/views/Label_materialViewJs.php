@@ -3,7 +3,9 @@
 
 	$(document).ready(function(){
 
-		
+		$(".tanggal").datepicker({
+			format: 'dd/mm/yyyy',
+		});
 
 
 		$('.tanggalspan').on("click", function(){
