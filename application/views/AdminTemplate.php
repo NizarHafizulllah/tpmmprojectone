@@ -56,6 +56,8 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/adminty/newassets'); ?>/bootstrap-datepicker.css"  />
     <script src="<?php echo base_url('assets/adminty/newassets'); ?>/bootstrap-datepicker.js"></script>
     
+    <link href="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
     <!-- <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script> -->
 <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/i18n/en.js" integrity="sha256-7YaeI5VCGS/ZlBhafoThN48d8ka+vijZ7c25nnLURWQ=" crossorigin="anonymous"></script> -->
 

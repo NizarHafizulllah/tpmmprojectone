@@ -1,107 +1,85 @@
-<div class="tab-pane" id="identitas_pabean" role="tabpanel">
-                                    <div class="row">
-
-                                        <div class="col-md-4">
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label for="userName-2" class="block">Jenis Daftaran</label>
-                                                <div class="input-group input-group-sm mb-0">
-                                                    <select id="" class="form-control mr-1">
-                                                        <option value="">- Pilih Jenis Daftaran -</option>
-                                                        <option value="cheese">Cheese</option>
-                                                        <option value="h">Hanry Die</option>
-                                                        <option value="c">Come Leo</option>
-                                                        <option value="h">Hampri Catlin</option>
-                                                    </select>
-                                                    <span class="input-group-addon btn btn-primary btn-sm" id="basic-addon10">
-                                                        <span class=""><i class="icofont icofont-refresh"></i></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label for="userName-2" class="block">No Faktur</label>
-                                                <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Faktur">
-                                            </div>
-
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label for="userName-2" class="block">No. Pabean</label>
-                                                <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Pabean">
-                                            </div>
-
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label for="userName-2" class="block">Pelabuhan</label>
-                                                <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Pelabuhan">
-                                            </div>
-
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label for="userName-2" class="block">No. PIB</label>
-                                                <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. PIB">
-                                            </div>
-
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label for="userName-2" class="block">Nama Importir / APM</label>
-                                                <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Nama Importir / APM">
-                                            </div>
-
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label for="userName-2" class="block">Cara Import</label>
-                                                <div class="input-group input-group-sm mb-0">
-                                                    <select id="" class="form-control mr-1">
-                                                        <option value="">- Pilih Cara Import-</option>
-                                                        <option value="cheese">Cheese</option>
-                                                        <option value="h">Hanry Die</option>
-                                                        <option value="c">Come Leo</option>
-                                                        <option value="h">Hampri Catlin</option>
-                                                    </select>
-                                                    <span class="input-group-addon btn btn-primary btn-sm" id="basic-addon10">
-                                                        <span class=""><i class="icofont icofont-refresh"></i></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label for="userName-2" class="block">Ket. Lain - lain</label>
-                                                <textarea rows="3" cols="3" class="form-control" placeholder="Faktur Form A Tanggal:"></textarea>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label for="userName-2" class="block">Pemohon</label>
-                                                <div class="input-group input-group-sm mb-0">
-                                                    <select id="" class="form-control mr-1">
-                                                        <option value="">- Pilih Pemohon -</option>
-                                                        <option value="cheese">Cheese</option>
-                                                        <option value="h">Hanry Die</option>
-                                                        <option value="c">Come Leo</option>
-                                                        <option value="h">Hampri Catlin</option>
-                                                    </select>
-                                                    <span class="input-group-addon btn btn-primary btn-sm mr-1" id="basic-addon10">
-                                                        <span class=""><i class="icofont icofont-refresh"></i></span>
-                                                    </span>
-                                                    <span class="input-group-addon btn btn-primary btn-sm" id="basic-addon10">
-                                                        <span class=""><i class="icofont icofont-plus"></i></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label class="block">Tanggal Faktur</label>
-                                                <input id="userName-2" name="userName" type="text" class="required form-control">
-                                            </div>
-
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label for="userName-2" class="block">Tanggal Pabean</label>
-                                                <input id="userName-2" name="userName" type="text" class="required form-control">
-                                            </div>
-
-                                            <div class="form-group input-group-sm row m-1">
-                                                <label for="userName-2" class="block">Tanggal PIB</label>
-                                                <input id="userName-2" name="userName" type="text" class="required form-control">
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="" class="col-sm-2">Jenis Daftaran</label>
+        <div class="col-sm-4">
+            <input name="jd_nama" type="hidden">
+            <select class="form-control select2-form" name="jd_id" id="form-jd">
+                <option value="">- Pilih Jenis Daftaran -</option>
+                @foreach($data['jenisdaftaran'] as $jd)
+                    <option value="{{$jd['jd_id']}}">{{$jd['jd_nama']}}</option>
+                @endforeach
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">No. Faktur</label>
+        <div class="col-sm-4">
+            <input name="no_faktur" type="text" class="form-control">
+        </div>
+        <label for="" class="col-sm-2">Tanggal Faktur</label>
+        <div class="col-sm-2">
+            <input name="tgl_faktur" type="text" class="form-control datepicker">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">No. Pabean</label>
+        <div class="col-sm-4">
+            <input name="no_pabean" type="text" class="form-control">
+        </div>
+        <label for="" class="col-sm-2">Tanggal Pabean</label>
+        <div class="col-sm-2">
+            <input name="tgl_pabean" type="text" class="form-control datepicker">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">Pelabuhan</label>
+        <div class="col-sm-4">
+            <input name="pelabuhan" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">No. PIB</label>
+        <div class="col-sm-4">
+            <input name="no_pib" type="text" class="form-control">
+        </div>
+        <label for="" class="col-sm-2">Tanggal PIB</label>
+        <div class="col-sm-2">
+            <input name="tgl_pib" type="text" class="form-control datepicker">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">Cara Impor</label>
+        <div class="col-sm-4">
+            <select class="form-control" name="impmthd_id" id="form-impor">
+                <option value="">- Pilih Cara Impor -</option>
+                @foreach($data['caraimpor'] as $jd)
+                    <option value="{{$jd['impmthd_id']}}">{{$jd['impmthd_name']}}</option>
+                @endforeach
+            </select>
+        </div>
+        <label for="" class="col-sm-2">Pemohon</label>
+        <div class="col-sm-4">
+            <div class="input-group">
+                <select name="pemohon_id" id="form-select-pemohon-registrasi" class="form-control select2-form" required></select>
+                <script id="registrasi-pemohon" type="text/x-handlebars-template">
+                    <option value="">- Pilih Pemohon -</option>
+                    @{{#each this}}
+                    <option value="@{{kode}}">@{{nama}}</option>
+                    @{{/each}}
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">Nama Importir</label>
+        <div class="col-sm-4">
+            <input name="nama_importir" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">Ket. Lain - lain</label>
+        <div class="col-sm-4">
+            <textarea name="ketr_pabean" class="form-control"></textarea>
+        </div>
+    </div>
+</div>

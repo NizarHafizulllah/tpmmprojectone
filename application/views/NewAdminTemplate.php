@@ -42,6 +42,24 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	
 		<link rel="shortcut icon" href="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/media/img/logo/favicon.ico" />
+
+
+		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+
+		<!--end::Global Theme Bundle -->
+
+		<!--begin::Page Vendors -->
+		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+
+		<!--end::Page Vendors -->
+
+		<!--begin::Page Scripts -->
+		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/custom/crud/datatables/search-options/column-search.js" type="text/javascript"></script>
+
+		<script src="<?php echo base_url('assets/adminty/newassets'); ?>/sweetalert29.js"></script>
+
+
 	</head>
 
 	
@@ -287,22 +305,18 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		<!-- begin::Quick Nav -->
 		
-
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".tanggal").datepicker({
+					format: 'dd/mm/yyyy',
+				});
+				$('.drpdwn').select2();
+			});
+		</script>
 		<!-- begin::Quick Nav -->
 
 		<!--begin::Global Theme Bundle -->
-		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
-
-		<!--end::Global Theme Bundle -->
-
-		<!--begin::Page Vendors -->
-		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-
-		<!--end::Page Vendors -->
-
-		<!--begin::Page Scripts -->
-		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/custom/crud/datatables/search-options/column-search.js" type="text/javascript"></script>
+		
 
 		<!--end::Page Scripts -->
 	</body>

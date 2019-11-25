@@ -13,8 +13,8 @@
 
                     <div class="row m-0">
                         <div class="col-sm-12 mb-1">
-                            <div class="card m-0">
-                                <div class="card-block">
+                            <div class="m-portlet m-portlet--mobile">
+                                <div class="m-portlet__body">
                                     
                                         <div class="form-group row mb-1">
                                             <div class="col-md-4 col-lg-3">
@@ -69,18 +69,20 @@
 
                     <div class="row m-0">
                         <div class="col-sm-5 mb-1">
-                            <div class="card m-0">
-                                <div class="card-block">
+                            <div class="m-portlet m-portlet--mobile">
+                                <div class="m-portlet__body">
 
-                                    <div class="form-group row mb-1">
-                                        <div class="col-md-12 col-lg-12">
-                                            <label>
+
+                                    <div class="m-form__group form-group">
+                                        <div class="m-checkbox-list">
+                                            <label class="m-checkbox">
                                                 <input type='hidden' value='1' name='v_is_no_bpkb_null'>
-                                                <input type="checkbox" name="v_is_no_bpkb_null" id="v_is_no_bpkb_null" value="0" class="form-control-sm">
-                                                <i class="helper"></i> No. BPKB Dikosongkan
+                                                <input type="checkbox" name="v_is_no_bpkb_null" id="v_is_no_bpkb_null" value="0"> No. BPKB Dikosongkan
+                                                <span></span>
                                             </label>
                                         </div>
                                     </div>
+                                    
 
                                     <div class="form-group row mb-1">
                                         <div class="col-md-6 col-lg-6">
@@ -122,8 +124,8 @@
                             </div>
                         </div>
                         <div class="col-sm-7">
-                            <div class="card">
-                                <div class="card-block">
+                            <div class="m-portlet m-portlet--mobile">
+                                <div class="m-portlet__body">
                                     
                                     <div class="form-group row mb-1">
                                         <div class="col-md-12 col-lg-12">

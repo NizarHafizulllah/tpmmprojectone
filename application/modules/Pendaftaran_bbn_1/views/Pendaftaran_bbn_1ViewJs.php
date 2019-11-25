@@ -60,7 +60,7 @@
 							  obj.data.forEach(function(item, index){
 
 							  	var newdata = prntTable.row.add([
-							  		'<button class="btn btn-danger btn-sm" onclick="hapus_data(\''+item.DAFT_ID+'\')" type="button"><i class="fa fa-trash"></i></button> <button class="btn btn-primary btn-sm" onclick="edit_data([\''+item.BARCODE+'\',\''+item.DAFT_ID+'\',\''+item.DIPLOMAT+'\',\''+item.NO_BPKB+'\',\''+item.NO_FAKTUR+'\',\''+item.NO_RANGKA+'\',\''+item.PEMOHON_ID+'\',\''+item.PEMOHON_JENIS+'\',\''+item.SUDAH_DIPROSES+'\',\''+item.TGL_DAFTAR+'\',\''+item.TIPE_DAFTARAN+'\' ])" type="button"><i class="fa fa-pencil"></i></button>',
+							  		'<button class="btn btn-danger btn-sm" onclick="hapus_data(\''+item.DAFT_ID+'\')" type="button"><i class="flaticon-delete"></i></button> <button class="btn btn-primary btn-sm" onclick="edit_data([\''+item.BARCODE+'\',\''+item.DAFT_ID+'\',\''+item.DIPLOMAT+'\',\''+item.NO_BPKB+'\',\''+item.NO_FAKTUR+'\',\''+item.NO_RANGKA+'\',\''+item.PEMOHON_ID+'\',\''+item.PEMOHON_JENIS+'\',\''+item.SUDAH_DIPROSES+'\',\''+item.TGL_DAFTAR+'\',\''+item.TIPE_DAFTARAN+'\' ])" type="button"><i class="flaticon-edit"></i></button>',
 									item.NO_BPKB, 
 									item.NO_RANGKA,
 									item.NO_FAKTUR,
