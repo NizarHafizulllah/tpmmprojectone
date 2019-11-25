@@ -230,7 +230,6 @@
                             <!-- Main-body start -->
                             <div class="main-body">
 
-
                                 <?= $content; ?>
 
                             </div>

@@ -10,17 +10,17 @@
                             <i class="flaticon-calendar"></i>
                         </span>
                         <h3 class="m-portlet__head-text">
-                            List View
+                            Entry Data BPKB
                         </h3>
                     </div>
                 </div>
                 <div class="m-portlet__head-tools">
                     <ul class="m-portlet__nav">
                         <li class="m-portlet__nav-item">
-                            <a href="#" class="btn btn-warning m-btn m-btn--custom m-btn--icon m-btn--pill m-btn--air">
+                            <a href="<?= site_url('Registrasi_bbn_1/baru'); ?>" class="btn btn-warning m-btn m-btn--custom m-btn--icon m-btn--pill m-btn--air btn-sm">
                                 <span>
                                     <i class="la la-plus"></i>
-                                    <span>Tambah Data</span>
+                                    <span>List Data BPKB</span>
                                 </span>
                             </a>
                         </li>
@@ -46,13 +46,15 @@
                             <div class="col-sm-3">
                                 <div class="form-check-inline">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="optradio"> No. Reg BPKB
+                                        <input type="radio" class="form-check-input" name="optradio"> No. BPKB
                                     </label>
                                 </div>
-
                             </div>
+
                             <div class="col-sm-5">
-                                <input id="confirm-2" name="confirm" type="text" class="form-control required" placeholder="No. Reg BPKB">
+                                <div class="input-group input-group-md">
+                                    <input id="userName-2" name="userName" type="text" class="required form-control mr-1">
+                                </div>
                             </div>
                         </div>
 
@@ -63,10 +65,12 @@
                                         <input type="radio" class="form-check-input" name="optradio"> No. Reg BPKB
                                     </label>
                                 </div>
-
                             </div>
+
                             <div class="col-sm-5">
-                                <input id="confirm-2" name="confirm" type="text" class="form-control required" placeholder="No. Rek BPKB">
+                                <div class="input-group input-group-md">
+                                    <input id="userName-2" name="userName" type="text" class="required form-control mr-1">
+                                </div>
                             </div>
                         </div>
 
@@ -77,13 +81,18 @@
                                         <input type="radio" class="form-check-input" name="optradio"> Barcode Berkas
                                     </label>
                                 </div>
+                            </div>
 
-                            </div>
                             <div class="col-sm-5">
-                                <input id="confirm-2" name="confirm" type="text " class="form-control required" placeholder="Barcode Berkas">
+                                <div class="input-group input-group-md">
+                                    <input id="userName-2" name="userName" type="text" class="required form-control mr-1">
+                                </div>
                             </div>
-                            <div class="col-sm-4">
-                                <button type="button" class="btn btn-primary btn-sm waves-effect waves-light btn-block"><i class="icofont icofont-search"></i> Cari Data</button>
+
+                            <div class="col-sm-2">
+                                <div class="">
+                                    <button type="button" class="btn btn-primary btn-md waves-effect waves-light"><i class="icofont icofont-search"></i> Cari Data</button>
+                                </div>
                             </div>
                         </div>
                     </div>
