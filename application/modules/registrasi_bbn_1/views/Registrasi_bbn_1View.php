@@ -17,7 +17,7 @@
                 <div class="m-portlet__head-tools">
                     <ul class="m-portlet__nav">
                         <li class="m-portlet__nav-item">
-                            <a href="<?= site_url('Registrasi_bbn_1/baru'); ?>" class="btn btn-warning m-btn m-btn--custom m-btn--icon m-btn--pill m-btn--air btn-sm">
+                            <a href="<?= site_url('Registrasi_bbn_1'); ?>" class="btn btn-warning m-btn m-btn--custom m-btn--icon m-btn--pill m-btn--air btn-sm">
                                 <span>
                                     <i class="la la-plus"></i>
                                     <span>List Data BPKB</span>
@@ -31,72 +31,77 @@
             <div class="m-portlet__body">
 
                 <!--begin::Form-->
+                <form id="formCari">
                 <div class="row">
                     <div class="col-3">
                         <div class="form-group">
-                            <label for="userName-2" class="block">Tanggal</label>
+                            <label for="userName" class="block">Tanggal</label>
                             <div class="">
-                                <input id="userName-2" name="userName" type="text" class="required form-control">
+                                <input id="tgl_cari" name="tgl_cari" value="<?php echo date('d/m/Y') ?>" type="text" class="required form-control tanggal">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-9">
-                        <div class="form row mb-2">
+                        <div class="form row mb-2 nobpkbspan">
                             <div class="col-sm-3">
                                 <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="optradio"> No. BPKB
+                                    <label class="m-radio">
+                                        <input type="radio" name="jeniscari" id="jeniscari0" value="0" data-bv-field="jeniscari" checked> No BPKB
+                                        <span></span>
                                     </label>
                                 </div>
                             </div>
 
                             <div class="col-sm-5">
                                 <div class="input-group input-group-md">
-                                    <input id="userName-2" name="userName" type="text" class="required form-control mr-1">
+                                    <input id="v_cari_no_bpkb" name="v_cari_no_bpkb" type="text" class="required form-control mr-1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form row mb-2 noregspan">
+                            <div class="col-sm-3">
+                                <div class="form-check-inline">
+                                    <label class="m-radio">
+                                        <input type="radio" name="jeniscari" id="jeniscari1" value="1" data-bv-field="jeniscari"> No Reg BPKB
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <div class="input-group input-group-md">
+                                    <input id="v_cari_no_reg" name="v_cari_no_reg" type="text" class="required form-control mr-1">
                                 </div>
                             </div>
                         </div>
 
                         <div class="form row mb-2">
-                            <div class="col-sm-3">
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="optradio"> No. Reg BPKB
-                                    </label>
-                                </div>
-                            </div>
 
-                            <div class="col-sm-5">
-                                <div class="input-group input-group-md">
-                                    <input id="userName-2" name="userName" type="text" class="required form-control mr-1">
+                                <div class="col-sm-3 barcodespan">
+                                    <div class="form-check-inline">
+                                        <label class="m-radio">
+                                            <input type="radio" name="jeniscari" id="jeniscari2" value="2" data-bv-field="jeniscari" > Barcode Berkas
+                                            <span></span>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="form row mb-2">
-                            <div class="col-sm-3">
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="optradio"> Barcode Berkas
-                                    </label>
+                                <div class="col-sm-5 barcodespan">
+                                    <div class="input-group input-group-md">
+                                        <input id="v_cari_barcode" name="v_cari_barcode" type="text" class="required form-control mr-1">
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="col-sm-5">
-                                <div class="input-group input-group-md">
-                                    <input id="userName-2" name="userName" type="text" class="required form-control mr-1">
-                                </div>
-                            </div>
 
                             <div class="col-sm-2">
                                 <div class="">
-                                    <button type="button" class="btn btn-primary btn-md waves-effect waves-light"><i class="icofont icofont-search"></i> Cari Data</button>
+                                    <button type="button" id="btnCari" class="btn btn-primary btn-md waves-effect waves-light"><i class="fa fa-search"></i> Cari Data</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                </form>
 
                 <hr>
 
@@ -127,49 +132,45 @@
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Tanggal</label>
-                                    <input id="userName-2" name="userName" type="text" class="input-group-sm required form-control" placeholder="Tanggal">
+                                    <label for="userName" class="block">Tanggal</label>
+                                    <input id="tanggal" name="tanggal" type="text" class="input-group-sm required form-control" placeholder="Tanggal">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Merk</label>
+                                    <label for="userName" class="block">Merk</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <select id="" class="form-control mr-1">
-                                            <option value="">- Pilih Merk -</option>
-                                            <option value="cheese">Cheese</option>
-                                            <option value="h">Hanry Die</option>
-                                            <option value="c">Come Leo</option>
-                                            <option value="h">Hampri Catlin</option>
-                                        </select>
-                                        <button class="input-group-addon btn btn-primary btn-sm" id="basic-addon10">
-                                            <span class=""><i class="icofont icofont-refresh"></i></span>
+                                        <?php 
+                                            echo form_dropdown("merk",$arr_merk,'','id="merk" class="form-control mr-2 drpdwn"'); 
+                                        ?>
+                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-refresh"></i></span>
                                         </button>
                                     </div>
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Tipe</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Tipe">
+                                    <input id="tipe" name="tipe" type="text" class="required form-control" placeholder="Tipe">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Tahun Buat</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Tahun Buat">
+                                    <label for="userName" class="block">Tahun Buat</label>
+                                    <input id="thn_buat" name="thn_buat" type="text" class="required form-control" placeholder="Tahun Buat">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Jumlah Sumbu</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Jumlah Sumbu">
+                                    <label for="userName" class="block">Jumlah Sumbu</label>
+                                    <input id="jml_sumbu" name="jml_sumbu" type="text" class="required form-control" placeholder="Jumlah Sumbu">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Peruntukan</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Peruntukan">
+                                    <label for="userName" class="block">Peruntukan</label>
+                                    <input id="peruntukan" name="peruntukan" type="text" class="required form-control" placeholder="Peruntukan">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">No. SUT</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. SUT">
+                                    <label for="userName" class="block">No. SUT</label>
+                                    <input id="no_sut" name="no_sut" type="text" class="required form-control" placeholder="No. SUT">
                                 </div>
 
                             </div>
@@ -178,49 +179,46 @@
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">No. Reg BPKB</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Reg BPKB">
+                                    <input id="noreg_bpkb" name="noreg_bpkb" type="text" class="required form-control" placeholder="No. Reg BPKB">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">No. Rangka</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Rangka">
+                                    <input id="norangka" name="norangka" type="text" class="required form-control" placeholder="No. Rangka">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Jenis</label>
+                                    <label for="userName" class="block">Jenis</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <select id="" class="form-control mr-1">
-                                            <option value="">- Pilih Jenis -</option>
-                                            <option value="cheese">Cheese</option>
-                                            <option value="h">Hanry Die</option>
-                                            <option value="c">Come Leo</option>
-                                            <option value="h">Hampri Catlin</option>
-                                        </select>
-                                        <span class="input-group-addon btn btn-primary btn-sm" id="basic-addon10">
-                                            <span class=""><i class="icofont icofont-refresh"></i></span>
-                                        </span>
+                                        <?php 
+                                                    echo form_dropdown("jenis",$arr_jenis,'','id="jenis" class="form-control mr-2 drpdwn"'); 
+                                                ?>
+                                        
+                                       <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-refresh"></i></span>
+                                        </button>
                                     </div>
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Tipe 2</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Tipe">
+                                    <label for="userName" class="block">Tipe 2</label>
+                                    <input id="tipe2" name="tipe2" type="text" class="required form-control" placeholder="Tipe">
                                 </div>
 
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Tahun Rakit</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Tahun Rakit">
+                                    <input id="thn_rakit" name="thn_rakit" type="text" class="required form-control" placeholder="Tahun Rakit">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Bahan Bakar</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Bahan Bakar">
+                                    <input id="bhn_bakar" name="bhn_bakar" type="text" class="required form-control" placeholder="Bahan Bakar">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">No. TPT</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. TPT">
+                                    <input id="no_tpt" name="no_tpt" type="text" class="required form-control" placeholder="No. TPT">
                                 </div>
 
                             </div>
@@ -228,51 +226,48 @@
                             <div class="col-md-4 mb-0">
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Dikeluarkan di</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Dikeluarkan di">
+                                    <input id="dikeluarkandi" name="dikeluarkandi" type="text" class="required form-control" placeholder="Dikeluarkan di">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">No. Mesin</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Mesin">
+                                    <input id="no_mesin" name="no_mesin" type="text" class="required form-control" placeholder="No. Mesin">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Model</label>
+                                    <label for="userName" class="block">Model</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <select id="" class="form-control mr-1">
-                                            <option value="">- Pilih Model -</option>
-                                            <option value="cheese">Cheese</option>
-                                            <option value="h">Hanry Die</option>
-                                            <option value="c">Come Leo</option>
-                                            <option value="h">Hampri Catlin</option>
-                                        </select>
-                                        <span class="input-group-addon btn btn-primary btn-sm mr-1" id="basic-addon10">
-                                            <span class=""><i class="icofont icofont-refresh"></i></span>
-                                        </span>
-                                        <span class="input-group-addon btn btn-primary btn-sm" id="basic-addon10">
-                                            <span class=""><i class="icofont icofont-plus"></i></span>
-                                        </span>
+                                         <?php 
+                                                    echo form_dropdown("model",$arr_model,'','id="model" class="form-control mr-2 drpdwn"'); 
+                                                ?>
+                                        
+                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-refresh"></i></span>
+                                        </button>
+                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-add"></i></span>
+                                        </button>
                                     </div>
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Silinder</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Silinder">
+                                    <input id="silinder" name="silinder" type="text" class="required form-control" placeholder="Silinder">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Jumlah Roda</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Jumlah Roda">
+                                    <input id="jml_roda" name="jml_roda" type="text" class="required form-control" placeholder="Jumlah Roda">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Warna</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Warna">
+                                    <input id="warna" name="warna" type="text" class="required form-control" placeholder="Warna">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Warna TNKB</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Warna TNKB">
+                                    <input id="warna_tnkb" name="warna_tnkb" type="text" class="required form-control" placeholder="Warna TNKB">
                                 </div>
 
                             </div>
@@ -283,68 +278,60 @@
                     <div class="tab-pane" id="identitas_pemilik" role="tabpanel">
                         <div class="row">
 
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">No. Identitas</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Identitas">
+                                    <input id="no_identitas" name="no_identitas" type="text" class="required form-control" placeholder="No. Identitas">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Nama Pemilik</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Nama Pemilik">
+                                    <label for="userName" class="block">Nama Pemilik</label>
+                                    <input id="nama_pemilik" name="nama_pemilik" type="text" class="required form-control" placeholder="Nama Pemilik">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Alamat Pemilik</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Alamat Pemilik">
+                                    <label for="userName" class="block">Alamat Pemilik</label>
+                                    <input id="alamat_pemilik" name="alamat_pemilik" type="text" class="required form-control" placeholder="Alamat Pemilik">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Kode Pos</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Kode Pos">
+                                    <label for="userName" class="block">Kode Pos</label>
+                                    <input id="kode_pos" name="kode_pos" type="text" class="required form-control" placeholder="Kode Pos">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">No. Ponsel</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Ponsel">
+                                    <label for="userName" class="block">No. Ponsel</label>
+                                    <input id="no_ponsel" name="no_ponsel" type="text" class="required form-control" placeholder="No. Ponsel">
                                 </div>
 
+
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Pekerjaan</label>
+                                    <label for="userName" class="block">Pekerjaan</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <select id="" class="form-control mr-1">
-                                            <option value="">- Pilih Pekerjaan -</option>
-                                            <option value="cheese">Cheese</option>
-                                            <option value="h">Hanry Die</option>
-                                            <option value="c">Come Leo</option>
-                                            <option value="h">Hampri Catlin</option>
-                                        </select>
-                                        <span class="input-group-addon btn btn-primary btn-sm" id="basic-addon10">
-                                            <span class=""><i class="icofont icofont-refresh"></i></span>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Wilayah / Polres</label>
-                                    <div class="input-group input-group-sm mb-0">
-                                        <select id="" class="form-control mr-1">
-                                            <option value="">- Pilih Wilayah -</option>
-                                            <option value="cheese">Cheese</option>
-                                            <option value="h">Hanry Die</option>
-                                            <option value="c">Come Leo</option>
-                                            <option value="h">Hampri Catlin</option>
-                                        </select>
-                                        <span class="input-group-addon btn btn-primary btn-sm" id="basic-addon10">
-                                            <span class=""><i class="icofont icofont-refresh"></i></span>
-                                        </span>
+                                        <?php 
+                                            echo form_dropdown("pekerjaan",$arr_pekerjaan,'','id="pekerjaan" class="form-control mr-2 drpdwn"'); 
+                                        ?>
+                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-refresh"></i></span>
+                                        </button>
                                     </div>
                                 </div>
 
 
+                                <div class="form-group input-group-sm row m-1">
+                                    <label for="userName" class="block">Wialayah Polres</label>
+                                    <div class="input-group input-group-sm mb-0">
+                                        <?php 
+                                            echo form_dropdown("wilayah_polres",$arr_wilayah,'','id="wilayah_polres" class="form-control mr-2"'); 
+                                        ?>
+                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-refresh"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-6">
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Set Data Kelurahan</label>
@@ -353,22 +340,22 @@
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Provinsi</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Provinsi">
+                                    <input id="provinsi" name="provinsi" type="text" class="required form-control" placeholder="Provinsi">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Kabupaten</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Kabupaten">
+                                    <input id="kabupaten" name="kabupaten" type="text" class="required form-control" placeholder="Kabupaten">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Kecamatan</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Kecamatan">
+                                    <input id="kecamatan" name="kecamatan" type="text" class="required form-control" placeholder="Kecamatan">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Kelurahan</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Kelurahan">
+                                    <input id="keluarahan" name="keluarahan" type="text" class="required form-control" placeholder="Kelurahan">
                                 </div>
 
                             </div>
@@ -381,9 +368,9 @@
 
                             <div class="col-md-4">
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Jenis Daftaran</label>
+                                    <label for="userName" class="block">Jenis Daftaran</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <select id="" class="form-control mr-1">
+                                        <select id="jenis_daftaran" name="jenis_daftaran" class="form-control mr-1">
                                             <option value="">- Pilih Jenis Daftaran -</option>
                                             <option value="cheese">Cheese</option>
                                             <option value="h">Hanry Die</option>
@@ -397,34 +384,34 @@
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">No Faktur</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Faktur">
+                                    <label for="userName" class="block">No Faktur</label>
+                                    <input id="no_faktur" name="no_faktur" type="text" class="required form-control" placeholder="No. Faktur">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">No. Pabean</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Pabean">
+                                    <label for="userName" class="block">No. Pabean</label>
+                                    <input id="no_pabean" name="no_pabean" type="text" class="required form-control" placeholder="No. Pabean">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Pelabuhan</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Pelabuhan">
+                                    <label for="userName" class="block">Pelabuhan</label>
+                                    <input id="pelabuhan" name="pelabuhan" type="text" class="required form-control" placeholder="Pelabuhan">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">No. PIB</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. PIB">
+                                    <label for="userName" class="block">No. PIB</label>
+                                    <input id="no_pib" name="no_pib" type="text" class="required form-control" placeholder="No. PIB">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Nama Importir / APM</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="Nama Importir / APM">
+                                    <label for="userName" class="block">Nama Importir / APM</label>
+                                    <input id="nama_importir" name="nama_importir" type="text" class="required form-control" placeholder="Nama Importir / APM">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Cara Import</label>
+                                    <label for="userName" class="block">Cara Import</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <select id="" class="form-control mr-1">
+                                        <select id="cara_impor" name="cara_impor" class="form-control mr-1">
                                             <option value="">- Pilih Cara Import-</option>
                                             <option value="cheese">Cheese</option>
                                             <option value="h">Hanry Die</option>
@@ -438,17 +425,17 @@
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Ket. Lain - lain</label>
-                                    <textarea rows="3" cols="3" class="form-control" placeholder="Faktur Form A Tanggal:"></textarea>
+                                    <label for="userName" class="block">Ket. Lain - lain</label>
+                                    <textarea rows="3" cols="3" class="form-control" id="keterangan" name="keterangan" placeholder="Faktur Form A Tanggal:"></textarea>
                                 </div>
 
                             </div>
 
                             <div class="col-md-4">
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Pemohon</label>
+                                    <label for="userName" class="block">Pemohon</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <select id="" class="form-control mr-1">
+                                        <select id="pemohon" name="pemohon" class="form-control mr-1">
                                             <option value="">- Pilih Pemohon -</option>
                                             <option value="cheese">Cheese</option>
                                             <option value="h">Hanry Die</option>
@@ -466,17 +453,17 @@
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Tanggal Faktur</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control">
+                                    <input id="tanggal_entry" name="tanggal_entry" type="text" class="required form-control tanggal">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Tanggal Pabean</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control">
+                                    <label for="userName" class="block">Tanggal Pabean</label>
+                                    <input id="tanggal_pabean" name="tanggal_pabean" type="text" class="required form-control tanggal">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName-2" class="block">Tanggal PIB</label>
-                                    <input id="userName-2" name="userName" type="text" class="required form-control">
+                                    <label for="userName" class="block">Tanggal PIB</label>
+                                    <input id="tanggal_pib" name="tanggal_pib" type="text" class="required form-control tanggal">
                                 </div>
 
                             </div>
@@ -491,13 +478,13 @@
                 <!-- No resi -->
 
                 <div class="row">
-                    <div class="col-sm-2 mb-2">
-                        <label for="email-2" class=""> <strong>No. Resi Pembayaran</strong></label>
+                    <div class="col-sm mb-2">
+                        <label for="email" class=""> <strong>No. Resi Pembayaran</strong></label>
                     </div>
 
                     <div class="col-sm-4 mb-2">
                         <div class="input-group mb-0">
-                            <input type="text" class="form-control mr-1" placeholder="No. Resi Pembayaran">
+                            <input type="text" class="form-control mr-1" name="no_resi_pembayaran" id="no_resi_pembayaran" placeholder="No. Resi Pembayaran">
                             <span class="input-group-addon btn btn-primary" id="basic-addon10">
                                 <span class=""><i class="icofont icofont-refresh"></i></span>
                             </span>
@@ -523,7 +510,7 @@
                     </div>
 
                     <div class="col-sm-4 mb-2">
-                        <input id="userName-2" name="userName" type="text" class="required form-control" placeholder="No. Rekom">
+                        <input id="no_rekom" name="no_rekom" type="text" class="required form-control" placeholder="No. Rekom">
                     </div>
                 </div>
 
@@ -533,15 +520,15 @@
                     </div>
 
                     <div class="col-sm-1">
-                        <input id="userName-2" name="userName" type="text" class="required form-control form-control-uppercase form-control-center form-control-bold">
+                        <input id="nopol_satu" name="nopol_satu" type="text" class="required form-control form-control-uppercase form-control-center form-control-bold">
                     </div>
 
                     <div class="col-sm-1">
-                        <input id="userName-2" name="userName" type="text" class="required form-control form-control-uppercase form-control-center form-control-bold">
+                        <input id="nopol_dua" name="nopol_dua" type="text" class="required form-control form-control-uppercase form-control-center form-control-bold">
                     </div>
 
                     <div class="col-sm-1">
-                        <input id="userName-2" name="userName" type="text" class="required form-control form-control-uppercase form-control-center form-control-bold">
+                        <input id="nopol_tiga" name="nopol_tiga" type="text" class="required form-control form-control-uppercase form-control-center form-control-bold">
                     </div>
 
                     <div class="col-sm-2">
@@ -564,3 +551,7 @@
         <!--end::Portlet-->
     </div>
 </div>
+
+<?php
+    $this->load->view($this->controller.'ViewJs');
+ ?>

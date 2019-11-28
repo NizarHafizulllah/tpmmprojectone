@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<<<<<<< HEAD
-=======
-<!-- begin::Head -->
->>>>>>> parent of 0c91c7a... revert
+
 
 <head>
 	<meta charset="utf-8" />

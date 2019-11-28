@@ -11,6 +11,11 @@ if ( ! function_exists('show_array'))
         // return $var;
     }  
 
+    function convertdate($date){
+        $ret = date("d/m/Y", strtotime($date));
+        return $ret;
+    }
+
    function number2roman($num,$isUpper=true) {
     $n = intval($num);
     $res = '';

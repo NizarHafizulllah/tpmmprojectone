@@ -14,13 +14,40 @@ class Coremodel extends CI_Model
     	print_r($this->userdata);
     }
 
+    function arr_dropdown($vTable, $vINDEX, $vVALUE, $vORDERBY){
+
+                $this->db->order_by($vORDERBY);
+                $res  = $this->db->get($vTable);
+       
+                $ret = array('' => '- Pilih Satu -');
+                foreach($res->result_array() as $row) : 
+                        $ret[$row[$vINDEX]] = $row[$vVALUE];
+                endforeach;
+                return $ret;
+
+        }
+
+      function arr_dropdowngroup($vTable, $vINDEX, $vVALUE, $vORDERBY){
+
+                $this->db->group_by($vINDEX);
+                $this->db->order_by($vORDERBY);
+                $res  = $this->db->get($vTable);
+       
+                $ret = array('' => '- Pilih Satu -');
+                foreach($res->result_array() as $row) : 
+                        $ret[$row[$vINDEX]] = $row[$vVALUE];
+                endforeach;
+                return $ret;
+
+        }
+
     function arr_dropdown2($vTable, $vINDEX, $vVALUE, $vORDERBY, $field, $search){
 
                 $this->db->where($field, $search);
                 $this->db->order_by($vORDERBY);
                 $res  = $this->db->get($vTable);
        
-                $ret = array('' => '');
+                $ret = array('' => '- Pilih Satu -');
                 foreach($res->result_array() as $row) : 
                         $ret[$row[$vINDEX]] = $row[$vVALUE];
                 endforeach;
