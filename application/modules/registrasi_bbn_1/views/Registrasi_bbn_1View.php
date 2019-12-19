@@ -4,7 +4,6 @@
 
 <div class="row">
     <div class="col-lg-12">
-
         <!--begin::Portlet-->
         <div class="m-portlet" id="m_portlet">
             <div class="m-portlet__head">
@@ -34,57 +33,57 @@
 
             <div class="m-portlet__body">
                 <form id="formCari">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="form-group">
-                            <label for="userName" class="block">Tanggal</label>
-                            <div class="">
-                                <input id="tgl_cari" name="tgl_cari" value="<?php echo date('d/m/Y') ?>" type="text" class="required form-control tanggal">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-9">
-                        <div class="form row mb-2 nobpkbspan">
-                            <div class="col-sm-3">
-                                <div class="form-check-inline">
-                                    <label class="m-radio">
-                                        <input type="radio" name="jeniscari" id="jeniscari0" value="0" data-bv-field="jeniscari" checked> No BPKB
-                                        <span></span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-5">
-                                <div class="input-group input-group-md">
-                                    <input id="v_cari_no_bpkb" name="v_cari_no_bpkb" type="text" class="required form-control mr-1">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label for="userName" class="block">Tanggal</label>
+                                <div class="">
+                                    <input id="tgl_cari" name="tgl_cari" value="<?php echo date('d/m/Y') ?>" type="text" class="required form-control tanggal">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form row mb-2 noregspan">
-                            <div class="col-sm-3">
-                                <div class="form-check-inline">
-                                    <label class="m-radio">
-                                        <input type="radio" name="jeniscari" id="jeniscari1" value="1" data-bv-field="jeniscari"> No Reg BPKB
-                                        <span></span>
-                                    </label>
+                        <div class="col-9">
+                            <div class="form row mb-2 nobpkbspan">
+                                <div class="col-sm-3">
+                                    <div class="form-check-inline">
+                                        <label class="m-radio">
+                                            <input type="radio" name="jeniscari" id="jeniscari0" value="0" data-bv-field="jeniscari" checked> No BPKB
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-5">
+                                    <div class="input-group input-group-md">
+                                        <input id="v_cari_no_bpkb" name="v_cari_no_bpkb" type="text" class="required form-control mr-1">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-sm-5">
-                                <div class="input-group input-group-md">
-                                    <input id="v_cari_no_reg" name="v_cari_no_reg" type="text" class="required form-control mr-1">
+                            <div class="form row mb-2 noregspan">
+                                <div class="col-sm-3">
+                                    <div class="form-check-inline">
+                                        <label class="m-radio">
+                                            <input type="radio" name="jeniscari" id="jeniscari1" value="1" data-bv-field="jeniscari"> No Reg BPKB
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-5">
+                                    <div class="input-group input-group-md">
+                                        <input id="v_cari_no_reg" name="v_cari_no_reg" type="text" class="required form-control mr-1">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="form row mb-2">
+                            <div class="form row mb-2">
 
                                 <div class="col-sm-3 barcodespan">
                                     <div class="form-check-inline">
                                         <label class="m-radio">
-                                            <input type="radio" name="jeniscari" id="jeniscari2" value="2" data-bv-field="jeniscari" > Barcode Berkas
+                                            <input type="radio" name="jeniscari" id="jeniscari2" value="2" data-bv-field="jeniscari"> Barcode Berkas
                                             <span></span>
                                         </label>
                                     </div>
@@ -95,14 +94,14 @@
                                     </div>
                                 </div>
 
-                            <div class="col-sm-2">
-                                <div class="">
-                                    <button type="button" id="btnCari" class="btn btn-primary btn-md waves-effect waves-light"><i class="fa fa-search"></i> Cari Data</button>
+                                <div class="col-sm-2">
+                                    <div class="">
+                                        <button type="button" id="btnCari" class="btn btn-primary btn-md waves-effect waves-light"><i class="fa fa-search"></i> Cari Data</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </form>
 
                 <hr>
@@ -141,8 +140,8 @@
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Merk</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <?php 
-                                            echo form_dropdown("merk",$arr_merk,'','id="merk" class="form-control mr-2"'); 
+                                        <?php
+                                        echo form_dropdown("merk", $arr_merk, '', 'id="merk" class="form-control mr-2 drpdwn"');
                                         ?>
                                         <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
@@ -192,11 +191,11 @@
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Jenis</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <?php 
-                                            echo form_dropdown("jenis",$arr_jenis,'','id="jenis" class="form-control mr-2"'); 
+                                        <?php
+                                        echo form_dropdown("jenis", $arr_jenis, '', 'id="jenis" class="form-control mr-2 drpdwn"');
                                         ?>
-                                        
-                                       <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+
+                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
                                         </button> -->
                                     </div>
@@ -243,11 +242,11 @@
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Model</label>
                                     <div class="input-group input-group-sm mb-0">
-                                         <?php 
-                                            echo form_dropdown("model",$arr_model,'','id="model" class="form-control mr-2"'); 
+                                        <?php
+                                        echo form_dropdown("model", $arr_model, '', 'id="model" class="form-control mr-2 drpdwn"');
                                         ?>
-                                        
-                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+
+                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
                                         </button>
                                         <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
@@ -314,12 +313,12 @@
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="pekerjaan" class="block">Pekerjaan</label>
                                     <div class="input-group input-group-sm mb-0">
-                                    <?php 
-                                        echo form_dropdown("pekerjaan",$arr_pekerjaan,'','id="pekerjaan" class="form-control mr-2"'); 
-                                    ?>
-                                    <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
-                                        <span class=""><i class="flaticon-refresh"></i></span>
-                                    </button> -->
+                                        <?php
+                                        echo form_dropdown("pekerjaan", $arr_pekerjaan, '', 'id="pekerjaan" class="form-control mr-2 drpdwn"');
+                                        ?>
+                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-refresh"></i></span>
+                                        </button>
                                     </div>
                                 </div>
 
@@ -327,8 +326,8 @@
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Wialayah Polres</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <?php 
-                                            echo form_dropdown("wilayah_polres",$arr_wilayah,'','id="wilayah_polres" class="form-control"'); 
+                                        <?php
+                                        echo form_dropdown("wilayah_polres", $arr_wilayah, '', 'id="wilayah_polres" class="form-control mr-2"');
                                         ?>
                                         <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
@@ -554,3 +553,6 @@
      ?>
 </div>
 
+<?php
+$this->load->view($this->controller . 'ViewJs');
+?>
