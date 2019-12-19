@@ -51,8 +51,8 @@ class Pendaftaran_bbn_1 extends AdminController
 	$this->load->library('form_validation');
 
 	$this->form_validation->set_rules('v_tanggal', 'Tanggal', 'required');
-  $this->form_validation->set_rules('pemohon_jenis', 'Jenis Pemohon', 'required');
-  $this->form_validation->set_rules('pemohon', 'Pemohon', 'required');
+  	$this->form_validation->set_rules('pemohon_jenis', 'Jenis Pemohon', 'required');
+  	$this->form_validation->set_rules('pemohon', 'Pemohon', 'required');
   
   
 

@@ -1,3 +1,7 @@
+
+
+
+
 <div class="row">
     <div class="col-lg-12">
 
@@ -29,8 +33,6 @@
             </div>
 
             <div class="m-portlet__body">
-
-                <!--begin::Form-->
                 <form id="formCari">
                 <div class="row">
                     <div class="col-3">
@@ -140,11 +142,11 @@
                                     <label for="userName" class="block">Merk</label>
                                     <div class="input-group input-group-sm mb-0">
                                         <?php 
-                                            echo form_dropdown("merk",$arr_merk,'','id="merk" class="form-control mr-2 drpdwn"'); 
+                                            echo form_dropdown("merk",$arr_merk,'','id="merk" class="form-control mr-2"'); 
                                         ?>
-                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
-                                        </button>
+                                        </button> -->
                                     </div>
                                 </div>
 
@@ -191,12 +193,12 @@
                                     <label for="userName" class="block">Jenis</label>
                                     <div class="input-group input-group-sm mb-0">
                                         <?php 
-                                                    echo form_dropdown("jenis",$arr_jenis,'','id="jenis" class="form-control mr-2 drpdwn"'); 
-                                                ?>
+                                            echo form_dropdown("jenis",$arr_jenis,'','id="jenis" class="form-control mr-2"'); 
+                                        ?>
                                         
-                                       <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                       <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
-                                        </button>
+                                        </button> -->
                                     </div>
                                 </div>
 
@@ -220,6 +222,10 @@
                                     <label class="block">No. TPT</label>
                                     <input id="no_tpt" name="no_tpt" type="text" class="required form-control" placeholder="No. TPT">
                                 </div>
+                                 <div class="form-group input-group-sm row m-1">
+                                    <label class="block">No. SRUT</label>
+                                    <input id="no_srut" name="no_srut" type="text" class="required form-control" placeholder="No. SRUT">
+                                </div>
 
                             </div>
 
@@ -238,15 +244,15 @@
                                     <label for="userName" class="block">Model</label>
                                     <div class="input-group input-group-sm mb-0">
                                          <?php 
-                                                    echo form_dropdown("model",$arr_model,'','id="model" class="form-control mr-2 drpdwn"'); 
-                                                ?>
+                                            echo form_dropdown("model",$arr_model,'','id="model" class="form-control mr-2"'); 
+                                        ?>
                                         
-                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
                                         </button>
                                         <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-add"></i></span>
-                                        </button>
+                                        </button> -->
                                     </div>
                                 </div>
 
@@ -306,14 +312,14 @@
 
 
                                 <div class="form-group input-group-sm row m-1">
-                                    <label for="userName" class="block">Pekerjaan</label>
+                                    <label for="pekerjaan" class="block">Pekerjaan</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <?php 
-                                            echo form_dropdown("pekerjaan",$arr_pekerjaan,'','id="pekerjaan" class="form-control mr-2 drpdwn"'); 
-                                        ?>
-                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
-                                            <span class=""><i class="flaticon-refresh"></i></span>
-                                        </button>
+                                    <?php 
+                                        echo form_dropdown("pekerjaan",$arr_pekerjaan,'','id="pekerjaan" class="form-control mr-2"'); 
+                                    ?>
+                                    <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                        <span class=""><i class="flaticon-refresh"></i></span>
+                                    </button> -->
                                     </div>
                                 </div>
 
@@ -322,40 +328,53 @@
                                     <label for="userName" class="block">Wialayah Polres</label>
                                     <div class="input-group input-group-sm mb-0">
                                         <?php 
-                                            echo form_dropdown("wilayah_polres",$arr_wilayah,'','id="wilayah_polres" class="form-control mr-2"'); 
+                                            echo form_dropdown("wilayah_polres",$arr_wilayah,'','id="wilayah_polres" class="form-control"'); 
                                         ?>
-                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
-                                        </button>
+                                        </button> -->
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
 
-                                <div class="form-group input-group-sm row m-1">
-                                    <label class="block">Set Data Kelurahan</label>
-                                    <button class="btn btn-primary btn-block btn-sm"><i class="icofont icofont-search"></i>Set Data Kelurahan</button>
-                                </div>
-
+                                
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Provinsi</label>
-                                    <input id="provinsi" name="provinsi" type="text" class="required form-control" placeholder="Provinsi">
+                                    <div class="input-group input-group-sm mb-0">
+                                        <?php 
+                                            echo form_dropdown("provinsi",$arr_provinsi,'','id="provinsi" class="form-control"'); 
+                                        ?>
+                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-refresh"></i></span>
+                                        </button> -->
+                                    </div>
+                                    <!-- <input id="provinsi" name="provinsi" type="text" class="required form-control" placeholder="Provinsi"> -->
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Kabupaten</label>
-                                    <input id="kabupaten" name="kabupaten" type="text" class="required form-control" placeholder="Kabupaten">
+                                    <?php 
+                                            echo form_dropdown("kabupaten",array(),'','id="kabupaten" class="form-control"'); 
+                                        ?>
+                                    <!-- <input id="kabupaten" name="kabupaten" type="text" class="required form-control" placeholder="Kabupaten"> -->
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Kecamatan</label>
-                                    <input id="kecamatan" name="kecamatan" type="text" class="required form-control" placeholder="Kecamatan">
+                                    <?php 
+                                            echo form_dropdown("kecamatan",array(),'','id="kecamatan" class="form-control"'); 
+                                        ?>
+                                    <!-- <input id="kecamatan" name="kecamatan" type="text" class="required form-control" placeholder="Kecamatan"> -->
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Kelurahan</label>
-                                    <input id="keluarahan" name="keluarahan" type="text" class="required form-control" placeholder="Kelurahan">
+                                    <?php 
+                                            echo form_dropdown("keluarahan",array(),'','id="keluarahan" class="form-control"'); 
+                                        ?>
+                                    <!-- <input id="keluarahan" name="keluarahan" type="text" class="required form-control" placeholder="Kelurahan"> -->
                                 </div>
 
                             </div>
@@ -370,16 +389,13 @@
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Jenis Daftaran</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <select id="jenis_daftaran" name="jenis_daftaran" class="form-control mr-1">
-                                            <option value="">- Pilih Jenis Daftaran -</option>
-                                            <option value="cheese">Cheese</option>
-                                            <option value="h">Hanry Die</option>
-                                            <option value="c">Come Leo</option>
-                                            <option value="h">Hampri Catlin</option>
-                                        </select>
-                                        <span class="input-group-addon btn btn-primary btn-sm" id="basic-addon10">
-                                            <span class=""><i class="icofont icofont-refresh"></i></span>
-                                        </span>
+                                        <?php 
+                                            echo form_dropdown("jenis_daftaran",$arr_jenisdaftaran,'','id="jenis_daftaran" class="form-control"'); 
+                                        ?>
+                                       
+                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-refresh"></i></span>
+                                        </button> -->
                                     </div>
                                 </div>
 
@@ -411,16 +427,9 @@
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Cara Import</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <select id="cara_impor" name="cara_impor" class="form-control mr-1">
-                                            <option value="">- Pilih Cara Import-</option>
-                                            <option value="cheese">Cheese</option>
-                                            <option value="h">Hanry Die</option>
-                                            <option value="c">Come Leo</option>
-                                            <option value="h">Hampri Catlin</option>
-                                        </select>
-                                        <span class="input-group-addon btn btn-primary btn-sm" id="basic-addon10">
-                                            <span class=""><i class="icofont icofont-refresh"></i></span>
-                                        </span>
+                                         <?php 
+                                            echo form_dropdown("cara_impor",$arr_impor,'','id="cara_impor" class="form-control mr-2"'); 
+                                        ?>
                                     </div>
                                 </div>
 
@@ -435,19 +444,9 @@
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Pemohon</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <select id="pemohon" name="pemohon" class="form-control mr-1">
-                                            <option value="">- Pilih Pemohon -</option>
-                                            <option value="cheese">Cheese</option>
-                                            <option value="h">Hanry Die</option>
-                                            <option value="c">Come Leo</option>
-                                            <option value="h">Hampri Catlin</option>
-                                        </select>
-                                        <span class="input-group-addon btn btn-primary btn-sm mr-1" id="basic-addon10">
-                                            <span class=""><i class="icofont icofont-refresh"></i></span>
-                                        </span>
-                                        <span class="input-group-addon btn btn-primary btn-sm" id="basic-addon10">
-                                            <span class=""><i class="icofont icofont-plus"></i></span>
-                                        </span>
+                                        <?php 
+                                            echo form_dropdown("pemohon",$arr_pemohon,'','id="pemohon" class="form-control mr-2"'); 
+                                        ?>
                                     </div>
                                 </div>
 
@@ -550,8 +549,8 @@
 
         <!--end::Portlet-->
     </div>
+    <?php
+        $this->load->view($this->controller.'ViewJs');
+     ?>
 </div>
 
-<?php
-    $this->load->view($this->controller.'ViewJs');
- ?>

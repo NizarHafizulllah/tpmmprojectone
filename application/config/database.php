@@ -73,14 +73,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-$tnsname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 180.250.16.227)(PORT = 1521))
-        (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = ORA11G.HOME.COM)))';
+$tnsname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.110)(PORT = 1521))
+        (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = dbsifik)))';
 
 $db['default'] = array(
 	'dsn' => $tnsname,
 	// 'dsn'	=> 'oci:dbname=180.250.16.227:1521/ORA11G.HOME.COM',
 	// 'hostname' => '',
-	'username' => 'DBSIFIK_MKS', //'nizar',
+	'username' => 'dbsifik_mks', //'nizar',
 	'password' => 'p1k1r3ndh3w3', //'bukanrahasia',
 	'database' => '',
 	'dbdriver' => 'oci8',
