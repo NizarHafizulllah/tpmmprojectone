@@ -29,13 +29,16 @@ class Registrasi_bbn_1 extends AdminController
 
 		$data['arr_wilayah'] = $this->cm->arr_dropdown2('M_POLRES', 'POLRES_KODE', 'POLRES_NAMA', 'POLRES_NAMA', 'POLDA_ID', $this->session['vl_polda_id']);
 
+		$data['arr_pemohon'] = $this->cm->arr_dropdown2('M_PEMOHON', 'PEMOHON_ID', 'PEMOHON_NAMA', 'PEMOHON_NAMA', 'POLDA_ID', $this->session['vl_polda_id']);
+		$data['arr_impor'] = $this->cm->arr_dropdown('M_CARA_IMPOR', 'IMPMTHD_ID', 'IMPMTHD_NAME', 'IMPMTHD_NAME');
 		$data['arr_merk'] = $this->cm->arr_dropdown('M_MERK', 'MERK_ID', 'MERK_NAMA', 'MERK_NAMA');
 		$data['arr_jenis'] = $this->cm->arr_dropdown('M_JENIS', 'JENIS_ID', 'JENIS_NAMA', 'JENIS_NAMA');
-		$data['arr_model'] = $this->cm->arr_dropdown('M_MODEL', 'MODEL_ID', 'MODEL_NAMA', 'MODEL_NAMA');
+		$data['arr_provinsi'] = $this->cm->arr_dropdown('M_JENIS', 'JENIS_ID', 'JENIS_NAMA', 'JENIS_NAMA');
+		$data['arr_model'] = array('' => '- Pilih Satu -');
 		$data['arr_pekerjaan'] = $this->cm->arr_dropdown('M_PEKERJAAN', 'PEKERJAAN_NAMA', 'PEKERJAAN_NAMA', 'PEKERJAAN_NAMA');
-		// $data['arr_merk'] = $this->cm->arr_dropdown('M_MERK', 'MERK_ID', 'MERK_NAMA', 'MERK_NAMA');
-		// $data['arr_merk'] = $this->cm->arr_dropdown('M_MERK', 'MERK_ID', 'MERK_NAMA', 'MERK_NAMA');
-
+		$data['arr_jenisdaftaran'] = $this->cm->arr_dropdown('M_JENIS_DAFTARAN', 'JD_ID', 'JD_NAMA', 'JD_ID');
+		$data['arr_provinsi'] = $this->cm->arr_dropdown('M_PROPINSI', 'NO_PROP', 'NAMA_PROP', 'NO_PROP');
+		
 		$data['title'] = "List Data BPKB";
 		$content = $this->load->view($this->controller . "View", $data, true);
 		$this->set_title($data['title']);
@@ -132,6 +135,41 @@ class Registrasi_bbn_1 extends AdminController
 		// show_array($data->result_array());
 	  	echo json_encode($arr);
 		// show_array($post);
+
+	}
+
+
+
+	function get_data_noka(){
+		$post = $this->input->post();
+
+
+		$this->db->select('A.BARCODE')->from('T_PAYMENT2 A');
+		$this->db->join('T_PENDAFTARAN2 B', 'A.DAFT_ID=B.DAFT_ID', 'INNER');
+		$this->db->where('B.NO_RANGKA', $post['no_rangka']);
+		$this->db->where('B.DUP_NR_COUNT', 0);
+
+		$cek1 = $this->db->get();
+
+
+		if ($cek1->num_rows()>0) {
+			$data = $cek1->row_array();
+			$variables[0] = array("parameter" => "v_jenis", "value" => 1);
+			$variables[1] = array("parameter" => "V_Cari", "value" => $post['no_rangka']);
+		
+
+
+	    $data_detail =  $this->cm->readCursor("BPKB_GET_DATA_FAKTUR2(:v_jenis, :v_cari, :refc)", $variables);
+	    // show_array()
+	   // echo $this->db->last_query();
+			$ret = array('error' => 1, 'data' => $data, 'detail' => $data_detail[0]);
+		}else{
+			$ret = array('error' => 2, 'message' => 'DATA KENDARAAN NO RANGKA '.$post['no_rangka'].' BELUM DIDAFTARKAN <BR/> MOHON UNTUK DIDAFTARKAN');
+		}
+
+
+		echo json_encode($ret);
+		// show_array($data);
 
 	}
 

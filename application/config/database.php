@@ -80,7 +80,7 @@ $db['default'] = array(
 	'dsn' => $tnsname,
 	// 'dsn'	=> 'oci:dbname=180.250.16.227:1521/ORA11G.HOME.COM',
 	// 'hostname' => '',
-	'username' => 'DBSIFIK_MKS', //'nizar',
+	'username' => 'dbsifik_mks', //'nizar',
 	'password' => 'p1k1r3ndh3w3', //'bukanrahasia',
 	'database' => '',
 	'dbdriver' => 'oci8',
