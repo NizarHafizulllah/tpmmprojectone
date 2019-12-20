@@ -56,7 +56,7 @@
                
             if(obj.error == 1) {
             	swal.close();
-            	// console.log(obj);
+            	console.log(obj);
             	$('#no_resi_pembayaran').val(obj.data.BARCODE);
             	$('#no_faktur').val(obj.detail.NO_FAKTUR);
             	$('#no_mesin').val(obj.detail.NO_MESIN);
@@ -65,9 +65,24 @@
             	// $('#no_faktur').val(obj.detail.JENIS);
             	// $('#no_faktur').val(obj.detail.MODEL);
             	$('#warna').val(obj.detail.WARNA);
-            	$('#nama_pemilik').val(obj.detail.NAMA_PEMILIK);
+            	$('#nama_pemilik1').val(obj.detail.nama[0]);
+
+            	if (obj.detail.nama[1]!== false) {
+            		$('#nama_pemilik2').val(obj.detail.nama[1]);
+            	}
+
+            	
             	$('#no_identitas').val(obj.detail.KTP);
-            	$('#alamat_pemilik').val(obj.detail.ALAMAT_PEMILIK);
+            	$('#alamat_pemilik1').val(obj.detail.alamat[0]);
+
+            	if (obj.detail.alamat[1]!== false) {
+            		$('#alamat_pemilik2').val(obj.detail.alamat[1]);
+            	}
+
+            	if (obj.detail.alamat[2]!== false) {
+            		$('#alamat_pemilik3').val(obj.detail.alamat[2]);
+            	}
+
             	// $('#no_faktur').val(obj.detail.KELURAHAN);
             	// $('#no_faktur').val(obj.detail.KECAMATAN);
             	// $('#no_faktur').val(obj.detail.KOTA);

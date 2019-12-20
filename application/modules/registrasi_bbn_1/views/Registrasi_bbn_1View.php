@@ -195,9 +195,9 @@
                                         echo form_dropdown("jenis", $arr_jenis, '', 'id="jenis" class="form-control mr-2 drpdwn"');
                                         ?>
 
-                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
-                                        </button> -->
+                                        </button>  -->
                                     </div>
                                 </div>
 
@@ -246,12 +246,12 @@
                                         echo form_dropdown("model", $arr_model, '', 'id="model" class="form-control mr-2 drpdwn"');
                                         ?>
 
-                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
                                         </button>
                                         <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-add"></i></span>
-                                        </button> -->
+                                        </button> --> 
                                     </div>
                                 </div>
 
@@ -291,12 +291,15 @@
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Nama Pemilik</label>
-                                    <input id="nama_pemilik" name="nama_pemilik" type="text" class="required form-control" placeholder="Nama Pemilik">
+                                    <input id="nama_pemilik1" name="nama_pemilik[]" type="text" class="required form-control mb-1" placeholder="Nama Pemilik 1" maxlength="36">
+                                    <input id="nama_pemilik2" name="nama_pemilik1[]" type="text" class="required form-control" placeholder="Nama Pemilik 2" maxlength="36">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Alamat Pemilik</label>
-                                    <input id="alamat_pemilik" name="alamat_pemilik" type="text" class="required form-control" placeholder="Alamat Pemilik">
+                                    <input id="alamat_pemilik1" name="alamat_pemilik[]" type="text" class="required form-control mb-1" placeholder="Alamat Pemilik 1" maxlength="36">
+                                    <input id="alamat_pemilik2" name="alamat_pemilik[]" type="text" class="required form-control mb-1" placeholder="Alamat Pemilik 2" maxlength="36">
+                                    <input id="alamat_pemilik3" name="alamat_pemilik[]" type="text" class="required form-control" placeholder="Alamat Pemilik 3" maxlength="36">
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
@@ -316,9 +319,9 @@
                                         <?php
                                         echo form_dropdown("pekerjaan", $arr_pekerjaan, '', 'id="pekerjaan" class="form-control mr-2 drpdwn"');
                                         ?>
-                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
-                                        </button>
+                                        </button> -->
                                     </div>
                                 </div>
 
@@ -476,10 +479,9 @@
                 <!-- No resi -->
 
                 <div class="row">
-                    <div class="col-sm mb-2">
+                    <div class="col-sm-2 mb-2">
                         <label for="email" class=""> <strong>No. Resi Pembayaran</strong></label>
                     </div>
-
                     <div class="col-sm-4 mb-2">
                         <div class="input-group mb-0">
                             <input type="text" class="form-control mr-1" name="no_resi_pembayaran" id="no_resi_pembayaran" placeholder="No. Resi Pembayaran">

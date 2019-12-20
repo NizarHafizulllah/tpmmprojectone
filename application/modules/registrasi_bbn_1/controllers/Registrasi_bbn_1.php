@@ -155,13 +155,27 @@ class Registrasi_bbn_1 extends AdminController
 		if ($cek1->num_rows()>0) {
 			$data = $cek1->row_array();
 			$variables[0] = array("parameter" => "v_jenis", "value" => 1);
-			$variables[1] = array("parameter" => "V_Cari", "value" => $post['no_rangka']);
+			$variables[1] = array("parameter" => "V_Cari", "value" => $post['no_rangka']
+		);
 		
 
 
 	    $data_detail =  $this->cm->readCursor("BPKB_GET_DATA_FAKTUR2(:v_jenis, :v_cari, :refc)", $variables);
 	    // show_array()
 	   // echo $this->db->last_query();
+	    $data_detail[0]['NAMA_PEMILIK'] = 'NIZAR HAFIZULLAH MARGA DININGRAT AGUS PRAYONO MUZDALIFA';
+	    // $data_detail[0]['nama'] = $this->split_word($data_detail[0]['NAMA_PEMILIK']);
+	    $data_detail[0]['nama'] = explode( "\n", wordwrap( $data_detail[0]['NAMA_PEMILIK'], 36));
+	    // show_array($data);
+	    // exit();
+	    // $data_detail[0]['nama'][0] = substr($data_detail[0]['NAMA_PEMILIK'],0,36);
+	    // $data_detail[0]['nama'][1] = substr($data_detail[0]['NAMA_PEMILIK'],36,72);
+
+	    $data_detail[0]['alamat'] = explode( "\n", wordwrap( $data_detail[0]['ALAMAT_PEMILIK'], 36));
+	    // $data_detail[0]['alamat'][0] = substr($data_detail[0]['ALAMAT_PEMILIK'],0,36);
+	    // $data_detail[0]['alamat'][1] = substr($data_detail[0]['ALAMAT_PEMILIK'],36,72);
+	    // $data_detail[0]['alamat'][2] = substr($data_detail[0]['ALAMAT_PEMILIK'],72,108);
+
 			$ret = array('error' => 1, 'data' => $data, 'detail' => $data_detail[0]);
 		}else{
 			$ret = array('error' => 2, 'message' => 'DATA KENDARAAN NO RANGKA '.$post['no_rangka'].' BELUM DIDAFTARKAN <BR/> MOHON UNTUK DIDAFTARKAN');
@@ -172,5 +186,8 @@ class Registrasi_bbn_1 extends AdminController
 		// show_array($data);
 
 	}
+
+
+	
 
 }
