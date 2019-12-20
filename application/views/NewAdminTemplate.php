@@ -29,19 +29,19 @@
 
 
 	<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+	<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 
-		<!--end::Global Theme Bundle -->
+	<!--end::Global Theme Bundle -->
 
-		<!--begin::Page Vendors -->
-		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+	<!--begin::Page Vendors -->
+	<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 
-		<!--end::Page Vendors -->
+	<!--end::Page Vendors -->
 
-		<!--begin::Page Scripts -->
-		<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/custom/crud/datatables/search-options/column-search.js" type="text/javascript"></script>
+	<!--begin::Page Scripts -->
+	<script src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/demo/default/custom/crud/datatables/search-options/column-search.js" type="text/javascript"></script>
 
-		<script src="<?php echo base_url('assets/adminty/newassets'); ?>/sweetalert29.js"></script>
+	<script src="<?php echo base_url('assets/adminty/newassets'); ?>/sweetalert29.js"></script>
 </head>
 
 
@@ -193,15 +193,15 @@
 						<li class="m-menu__item " aria-haspopup="true"><a href="<?php echo site_url('Dashboard'); ?>" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i><span class="m-menu__link-title"> <span class="m-menu__link-wrap"> <span class="m-menu__link-text">Dashboard</span></span></span></a></li>
 
 						<?php foreach ($this->menu as $key => $value) {
-							?>
+						?>
 
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon flaticon-share"></i><span class="m-menu__link-text"><?php echo $value['NAMA_GROUP'] ?></span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
 								<div class="m-menu__submenu "><span class="m-menu__arrow"></span>
 									<ul class="m-menu__subnav">
 
 										<?php foreach ($value['submenu'] as $key2 => $value2) {
-												$url = $value2['PATH'];
-												?>
+																																																																				$url = $value2['PATH'];
+										?>
 											<li class="m-menu__item " aria-haspopup="true"><a href="<?php echo site_url($url); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text"><?php echo $value2['NAMA_SUB_GROUP'] ?></span></a></li>
 										<?php } ?>
 									</ul>
@@ -221,7 +221,6 @@
 				<div class="m-content">
 
 					<?= $content; ?>
-
 
 					<!-- END EXAMPLE TABLE PORTLET-->
 				</div>
@@ -262,21 +261,21 @@
 		<i class="la la-arrow-up"></i>
 	</div>
 
-		<!-- begin::Quick Nav -->
-		
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$(".tanggal").datepicker({
-					format: 'dd/mm/yyyy',
-				});
-				$('.drpdwn').select2();
+	<!-- begin::Quick Nav -->
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".tanggal").datepicker({
+				format: 'dd/mm/yyyy',
 			});
-		</script>
-		<!-- begin::Quick Nav -->
+			$('.drpdwn').select2();
+		});
+	</script>
+	<!-- begin::Quick Nav -->
 
-		<!--begin::Global Theme Bundle -->
-		
+	<!--begin::Global Theme Bundle -->
 
-<!-- end::Body -->
+
+	<!-- end::Body -->
 
 </html>

@@ -6,8 +6,7 @@
                     <label class="col-sm-2 col-form-label">POLDA</label>
                     <div class="col-sm-6">
                         <div class="input-group">
-                            <select id="" class="form-control">
-                                <option value="">- Pilih POLDA -</option>
+                            <select id="hello-single" class="form-control">
                                 <option value="cheese">Cheese</option>
                                 <option value="h">Hanry Die</option>
                                 <option value="c">Come Leo</option>
@@ -45,7 +44,7 @@
                 <div class="form-group row mb-2">
                     <label class="col-sm-2 col-form-label"></label>
                     <div class="col-sm-2">
-                        <button type="button" id="btnBaru" class="btn btn-primary form-control"><i class="la la-save"> </i> Simpan</button>
+                        <button type="button" id="btnBaru" class="btn btn-primary"><i class="la la-save"> </i> Simpan</button>
                     </div>
                 </div>
             </div>
