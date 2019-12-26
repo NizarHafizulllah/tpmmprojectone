@@ -9,20 +9,17 @@
             <div class="m-portlet m-portlet--mobile">
                 <div class="m-portlet__body">
                     <form id="form_data">
-                        <div class="form-group row mb-1">
-                            <div class="col-md-4 col-lg-2">
-                                <label for="userName-2" class="block">Tanggal</label>
-                            </div>
-                            <div class="col-md-8 col-lg-4">
-                                <input id="v_tanggal" name="v_tanggal" type="text" class="required form-control form-control-sm tanggal" value="<?php echo date('d/m/Y'); ?>" placeholder="Tanggal">
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Tanggal</label>
+                            <div class="col-sm-2">
+                                <input id="v_tanggal" name="v_tanggal" type="text" class="required form-control tanggal" value="<?php echo date('d/m/Y'); ?>" placeholder="Tanggal">
                             </div>
                         </div>
 
-                        <div class="form-group row mb-1">
-                            <div class="col-md-4 col-md-2">
-                                <label for="email-2" class="block">Jenis Pemohon</label>
-                            </div>
-                            <div class="col-sm-10">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Jenis Pemohon</label>
+                            <div class="col-sm-8">
                                 <div class="form-radio">
                                     <div class="radio radiofill radio-inverse radio-inline">
                                         <label class="m-radio">
@@ -40,11 +37,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-1">
-                            <div class="col-md-4 col-lg-2">
-                                <label for="email-2" class="block">Pemohon</label>
-                            </div>
-
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Pemohon</label>
                             <div class="col-md-8 col-lg-4">
                                 <?php echo form_dropdown("pemohon", $arr_pemohon, '', 'id="pemohon" class="form-control form-control-sm m-1"'); ?>
                             </div>
@@ -64,22 +58,20 @@
                         </div>
 
                         <div class="form-group row mb-1">
-                            <div class="col-md-4 col-lg-2">
-                                <label for="userName-2" class="block"></label>
-                            </div>
-                            <div class="col-md-8 col-lg-4">
+                            <label class="col-sm-2 col-form-label"></label>
+                            <div class="col-sm-8">
                                 <button type="button" id="btnCariServer" class="btn btn-primary btn btn-sm ml-1"><i class=" flaticon-search"></i> Tampil Data</button>
                             </div>
                         </div>
+
                         <hr>
+
                         <div class="form-group row mb-2">
-                            <div class="col-md-4 col-lg-2">
-                                <label for="confirm-2" class="block">No Resi Pembayaran</label>
+                            <label class="col-sm-2 col-form-label">No. Resi Pembayaran</label>
+                            <div class="col-sm-4">
+                                <input id="vBarcodeBank" name="vBarcodeBank" type="text" class="form-control required">
                             </div>
-                            <div class="col-md-4 col-lg-4">
-                                <input id="vBarcodeBank" name="vBarcodeBank" type="text" class="form-control form-control-sm required">
-                            </div>
-                            <div class="col-md-4 col-lg-4">
+                            <div class="col-sm-2">
                                 <div class="m-form__group form-group">
                                     <div class="m-checkbox-list">
                                         <label class="m-checkbox">
@@ -89,24 +81,19 @@
                                         </label>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
 
                         <div class="form-group row mb-2">
-                            <div class="col-md-4 col-lg-2">
-                                <label for="confirm-2" class="block">No Rangka</label>
-                            </div>
+                            <label class="col-sm-2 col-form-label">No. Rangka</label>
                             <div class="col-md-8 col-lg-4">
                                 <input type="hidden" name="daftaran_id" id="daftaran_id">
-                                <input id="vNoRangka" name="vNoRangka" type="text" class="form-control form-control-sm required">
+                                <input id="vNoRangka" name="vNoRangka" type="text" class="form-control required">
                             </div>
                         </div>
 
                         <div class="form-group row mb-2">
-                            <div class="col-md-4 col-lg-2">
-                                <label for="userName-2" class="block"></label>
-                            </div>
+                            <label class="col-sm-2 col-form-label"></label>
                             <div class="col-md-8 col-lg-10">
                                 <button type="button" onclick="reset_form()" class="btn btn-primary btn btn-sm ml-1"><i class=" flaticon-add-circular-button"></i> Baru</button>
                                 <button type="button" id="btnSimpan" class="btn btn-primary btn btn-sm ml-1"><i class="fa fa-save"></i> Simpan</button>

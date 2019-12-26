@@ -32,11 +32,11 @@
                                     </div>
 
                                     <div class="form-group row mb-2">
-                                        <label class="col-sm-4 col-form-label">Kabupaten</label>
+                                        <label class="col-sm-4 col-form-label">KABUPATEN</label>
                                         <div class="col-sm-8">
                                             <div class="input-group m-0">
                                                 <select id="" class="form-control">
-                                                    <option value="">- Pilih Kabupaten -</option>
+                                                    <option value="">- Pilih KABUPATEN -</option>
                                                     <option value="cheese">Cheese</option>
                                                     <option value="h">Hanry Die</option>
                                                     <option value="c">Come Leo</option>
@@ -51,7 +51,7 @@
                                         <div class="col-sm-6">
                                             <div class="input-group">
                                                 <select id="" class="form-control">
-                                                    <option value="">- Pilih Warna TNKB -</option>
+                                                    <option value="">- Pilih WARNA TNKB -</option>
                                                     <option value="cheese">Cheese</option>
                                                     <option value="h">Hanry Die</option>
                                                     <option value="c">Come Leo</option>
@@ -67,7 +67,7 @@
                                         <div class="col-sm-6">
                                             <div class="input-group m-0">
                                                 <select id="" class="form-control">
-                                                    <option value="">- Pilih Jenis Kendaraan -</option>
+                                                    <option value="">- Pilih JENIS KENDARAAN -</option>
                                                     <option value="cheese">Cheese</option>
                                                     <option value="h">Hanry Die</option>
                                                     <option value="c">Come Leo</option>
@@ -82,7 +82,7 @@
                                         <div class="col-sm-4">
                                             <div class="input-group">
                                                 <select id="" class="form-control">
-                                                    <option value="">- Pilih Wilayah -</option>
+                                                    <option value="">- Pilih WILAYAH -</option>
                                                     <option value="cheese">Cheese</option>
                                                     <option value="h">Hanry Die</option>
                                                     <option value="c">Come Leo</option>
@@ -90,7 +90,6 @@
                                                 </select>
                                             </div>
                                         </div>
-
                                     </div>
 
                                     <div class="form-group row mb-2">
@@ -98,7 +97,7 @@
                                         <div class="col-sm-4">
                                             <div class="input-group m-0">
                                                 <select id="" class="form-control">
-                                                    <option value="">- Pilih Seri -</option>
+                                                    <option value="">- Pilih SERI -</option>
                                                     <option value="cheese">Cheese</option>
                                                     <option value="h">Hanry Die</option>
                                                     <option value="c">Come Leo</option>
@@ -109,7 +108,7 @@
                                     </div>
 
                                     <div class="form-group row mb-2">
-                                        <label class="col-sm-4 col-form-label">No. Awal S/d Akhir</label>
+                                        <label class="col-sm-4 col-form-label">NO AWAL S/D AKHIR</label>
                                         <div class="col-sm-4">
 
                                             <div class="input-daterange input-group norekspan mb-1">
@@ -119,7 +118,7 @@
                                                 </div>
                                                 <input type="text" class="input-sm form-control form-control m-input" name="CrNoRekBPKBAkhir" id="CrNoRekBPKBAkhir" placeholder="0">
                                             </div>
-                                            
+
                                         </div>
                                     </div>
 
@@ -139,7 +138,7 @@
                                     </div>
 
                                     <div class="form-group row mb-2">
-                                        <label class="col-sm-4 col-form-label">Tanggal Dialokasi</label>
+                                        <label class="col-sm-4 col-form-label">TANGGAL DIALOKASI</label>
                                         <div class="col-sm-4">
                                             <input type="text" class="form-control m-input tanggal" id="CrTanggalAwal" value="26/11/2019" name="CrTanggalAwal" placeholder="Tanggal">
                                         </div>
@@ -154,8 +153,8 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default waves-effect " data-dismiss="modal">Tutup</button>
-                <button type="button" id="btnSimpan" class="btn btn-primary waves-effect waves-light "><i class="la la-save"></i> Buat dan Simpan Data</button>
+                <button type="button" class="btn btn-default waves-effect " data-dismiss="modal">TUTUP</button>
+                <button type="button" id="btnSimpan" class="btn btn-primary waves-effect waves-light "><i class="la la-save"></i> BUAT DAN SIMPAN DATA</button>
             </div>
         </div>
     </div>

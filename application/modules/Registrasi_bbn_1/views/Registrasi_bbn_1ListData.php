@@ -61,7 +61,7 @@
                                     <th>Operator</th>
                                 </tr>
                             </thead>
-                            
+
                         </table>
                     </div>
                 </div>
@@ -70,9 +70,6 @@
     </div>
 </div>
 
-
-
-
-<?php 
-$this->load->view($this->controller.'ListDataJs');
+<?php
+$this->load->view($this->controller . 'ListDataJs');
 ?>

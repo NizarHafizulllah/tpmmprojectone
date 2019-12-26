@@ -149,20 +149,19 @@
                                 <button type="button" id="btnBaru" class="btn btn-primary"><i class="la la-save"> </i> Simpan</button>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="tab-pane" id="profile1" role="tabpanel">
                         <div class="form-group row mb-2">
-                            <label class="col-sm-2 col-form-label">No. Awal S/d Akhir</label>
+                            <label class="col-sm-2 col-form-label">Tgl. Awal S/d Akhir</label>
                             <div class="col-sm-4">
 
                                 <div class="input-daterange input-group tanggalspan mb-1">
-                                    <input type="text" class="input-sm form-control form-control m-input tanggal" id="CrTanggalAwal" value="<?php echo date('d/m/Y'); ?>" name="CrTanggalAwal" placeholder="Tanggal Awal">
+                                    <input type="text" class="input-sm form-control m-input tanggal" id="CrTanggalAwal" value="<?php echo date('d/m/Y'); ?>" name="CrTanggalAwal" placeholder="Tanggal Awal">
                                     <div class="input-group-append">
                                         <span class="input-group-text">S/d</span>
                                     </div>
-                                    <input type="text" class="input-sm form-control form-control m-input tanggal" id="CrTanggalAkhir" name="CrTanggalAkhir" placeholder="Tanggal Akhir" value="<?php echo date('d/m/Y'); ?>">
+                                    <input type="text" class="input-sm form-control m-input tanggal" id="CrTanggalAkhir" name="CrTanggalAkhir" placeholder="Tanggal Akhir" value="<?php echo date('d/m/Y'); ?>">
                                 </div>
 
                             </div>

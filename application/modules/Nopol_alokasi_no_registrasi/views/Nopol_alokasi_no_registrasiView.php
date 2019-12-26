@@ -5,10 +5,10 @@
 
                 <ul class="nav nav-tabs  tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">Setting Antrian</a>
+                        <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">SETTING ANTRIAN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#profile1" role="tab">Pembatalan Alokasi Nopol</a>
+                        <a class="nav-link" data-toggle="tab" href="#profile1" role="tab">PEMBATALAN ALOKASI NOPOL</a>
                     </li>
                 </ul>
 
@@ -29,18 +29,18 @@
                             </div>
 
                             <div class="col-md-8 col-lg-4">
-                                <button class="btn btn-primary ml-1" type="button" id="btnCariServer"><i class="la la-search"></i> Cari Data</button>
-                                <button class="btn btn-primary ml-1" data-toggle="modal" data-target="#large-Modal"><i class="la la-plus"></i> Buat Alokasi Baru</button>
+                                <button class="btn btn-primary ml-1" type="button" id="btnCariServer"><i class="la la-search"></i> CARI DATA</button>
+                                <button class="btn btn-primary ml-1" data-toggle="modal" data-target="#large-Modal"><i class="la la-plus"></i> BUAT ALOKASI BARU</button>
                             </div>
 
                         </div>
 
                         <div class="form-group row mb-2">
-                            <label class="col-sm-2 col-form-label">Kabupaten</label>
+                            <label class="col-sm-2 col-form-label">KABUPATEN</label>
                             <div class="col-sm-6">
                                 <div class="input-group m-0">
                                     <select id="" class="form-control">
-                                        <option value="">- Pilih Kabupaten -</option>
+                                        <option value="">- Pilih KABUPATEN -</option>
                                         <option value="cheese">Cheese</option>
                                         <option value="h">Hanry Die</option>
                                         <option value="c">Come Leo</option>
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="form-group row mb-2">
-                            <label class="col-sm-2 col-form-label">No. Polisi</label>
+                            <label class="col-sm-2 col-form-label">NO. POLISI</label>
                             <div class="col-sm-2">
                                 <input type="text" name="nama" class="form-control p.thick">
                             </div>
@@ -134,19 +134,19 @@
 
                     <div class="tab-pane" id="profile1" role="tabpanel">
                         <div class="form-group input-group-sm row mb-2">
-                            <label class="col-sm-2 col-form-label">No Polisi</label>
+                            <label class="col-sm-2 col-form-label">NO POLISI</label>
                             <div class="col-sm-3">
                                 <input type="text" name="nama" class="form-control">
                             </div>
-                            <button class="btn btn-primary ml-1"><i class="la la-check"></i> Proses</button>
+                            <button class="btn btn-primary ml-1"><i class="la la-check"></i> PROSES</button>
                         </div>
 
                         <div class="form-group input-group-sm row mb-2">
-                            <label class="col-sm-2 col-form-label">No Polisi</label>
+                            <label class="col-sm-2 col-form-label">NO POLISI</label>
                             <div class="col-sm-3">
                                 <input type="text" name="nama" class="form-control">
                             </div>
-                            <button class="btn btn-primary ml-1"><i class="la la-check"></i> Proses</button>
+                            <button class="btn btn-primary ml-1"><i class="la la-check"></i> PROSES</button>
                         </div>
                     </div>
                 </div>

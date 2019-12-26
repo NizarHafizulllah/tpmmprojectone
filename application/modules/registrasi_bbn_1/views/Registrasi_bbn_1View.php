@@ -1,7 +1,3 @@
-
-
-
-
 <div class="row">
     <div class="col-lg-12">
         <!--begin::Portlet-->
@@ -44,8 +40,8 @@
                         </div>
 
                         <div class="col-9">
-                            <div class="form row mb-2 nobpkbspan">
-                                <div class="col-sm-3">
+                            <div class="form row mb-0 nobpkbspan">
+                                <div class="col-sm-3 col-form-label">
                                     <div class="form-check-inline">
                                         <label class="m-radio">
                                             <input type="radio" name="jeniscari" id="jeniscari0" value="0" data-bv-field="jeniscari" checked> No BPKB
@@ -61,8 +57,8 @@
                                 </div>
                             </div>
 
-                            <div class="form row mb-2 noregspan">
-                                <div class="col-sm-3">
+                            <div class="form row mb-0 noregspan">
+                                <div class="col-sm-3 col-form-label">
                                     <div class="form-check-inline">
                                         <label class="m-radio">
                                             <input type="radio" name="jeniscari" id="jeniscari1" value="1" data-bv-field="jeniscari"> No Reg BPKB
@@ -78,9 +74,8 @@
                                 </div>
                             </div>
 
-                            <div class="form row mb-2">
-
-                                <div class="col-sm-3 barcodespan">
+                            <div class="form row mb-0">
+                                <div class="col-sm-3 barcodespan col-form-label">
                                     <div class="form-check-inline">
                                         <label class="m-radio">
                                             <input type="radio" name="jeniscari" id="jeniscari2" value="2" data-bv-field="jeniscari"> Barcode Berkas
@@ -96,11 +91,12 @@
 
                                 <div class="col-sm-2">
                                     <div class="">
-                                        <button type="button" id="btnCari" class="btn btn-primary btn-md waves-effect waves-light"><i class="fa fa-search"></i> Cari Data</button>
+                                        <button type="button" id="btnCari" class="btn btn-primary btn-md waves-effect waves-light"><i class="la la-search"></i> Cari Data</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </form>
 
@@ -221,7 +217,7 @@
                                     <label class="block">No. TPT</label>
                                     <input id="no_tpt" name="no_tpt" type="text" class="required form-control" placeholder="No. TPT">
                                 </div>
-                                 <div class="form-group input-group-sm row m-1">
+                                <div class="form-group input-group-sm row m-1">
                                     <label class="block">No. SRUT</label>
                                     <input id="no_srut" name="no_srut" type="text" class="required form-control" placeholder="No. SRUT">
                                 </div>
@@ -251,7 +247,7 @@
                                         </button>
                                         <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-add"></i></span>
-                                        </button> --> 
+                                        </button> -->
                                     </div>
                                 </div>
 
@@ -341,12 +337,12 @@
 
                             <div class="col-md-6">
 
-                                
+
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Provinsi</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <?php 
-                                            echo form_dropdown("provinsi",$arr_provinsi,'','id="provinsi" class="form-control"'); 
+                                        <?php
+                                        echo form_dropdown("provinsi", $arr_provinsi, '', 'id="provinsi" class="form-control"');
                                         ?>
                                         <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
@@ -357,25 +353,25 @@
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Kabupaten</label>
-                                    <?php 
-                                            echo form_dropdown("kabupaten",array(),'','id="kabupaten" class="form-control"'); 
-                                        ?>
+                                    <?php
+                                    echo form_dropdown("kabupaten", array(), '', 'id="kabupaten" class="form-control"');
+                                    ?>
                                     <!-- <input id="kabupaten" name="kabupaten" type="text" class="required form-control" placeholder="Kabupaten"> -->
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Kecamatan</label>
-                                    <?php 
-                                            echo form_dropdown("kecamatan",array(),'','id="kecamatan" class="form-control"'); 
-                                        ?>
+                                    <?php
+                                    echo form_dropdown("kecamatan", array(), '', 'id="kecamatan" class="form-control"');
+                                    ?>
                                     <!-- <input id="kecamatan" name="kecamatan" type="text" class="required form-control" placeholder="Kecamatan"> -->
                                 </div>
 
                                 <div class="form-group input-group-sm row m-1">
                                     <label class="block">Kelurahan</label>
-                                    <?php 
-                                            echo form_dropdown("keluarahan",array(),'','id="keluarahan" class="form-control"'); 
-                                        ?>
+                                    <?php
+                                    echo form_dropdown("keluarahan", array(), '', 'id="keluarahan" class="form-control"');
+                                    ?>
                                     <!-- <input id="keluarahan" name="keluarahan" type="text" class="required form-control" placeholder="Kelurahan"> -->
                                 </div>
 
@@ -391,10 +387,10 @@
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Jenis Daftaran</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <?php 
-                                            echo form_dropdown("jenis_daftaran",$arr_jenisdaftaran,'','id="jenis_daftaran" class="form-control"'); 
+                                        <?php
+                                        echo form_dropdown("jenis_daftaran", $arr_jenisdaftaran, '', 'id="jenis_daftaran" class="form-control"');
                                         ?>
-                                       
+
                                         <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
                                             <span class=""><i class="flaticon-refresh"></i></span>
                                         </button> -->
@@ -429,8 +425,8 @@
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Cara Import</label>
                                     <div class="input-group input-group-sm mb-0">
-                                         <?php 
-                                            echo form_dropdown("cara_impor",$arr_impor,'','id="cara_impor" class="form-control mr-2"'); 
+                                        <?php
+                                        echo form_dropdown("cara_impor", $arr_impor, '', 'id="cara_impor" class="form-control mr-2"');
                                         ?>
                                     </div>
                                 </div>
@@ -446,8 +442,8 @@
                                 <div class="form-group input-group-sm row m-1">
                                     <label for="userName" class="block">Pemohon</label>
                                     <div class="input-group input-group-sm mb-0">
-                                        <?php 
-                                            echo form_dropdown("pemohon",$arr_pemohon,'','id="pemohon" class="form-control mr-2"'); 
+                                        <?php
+                                        echo form_dropdown("pemohon", $arr_pemohon, '', 'id="pemohon" class="form-control mr-2"');
                                         ?>
                                     </div>
                                 </div>
@@ -486,7 +482,7 @@
                         <div class="input-group mb-0">
                             <input type="text" class="form-control mr-1" name="no_resi_pembayaran" id="no_resi_pembayaran" placeholder="No. Resi Pembayaran">
                             <span class="input-group-addon btn btn-primary" id="basic-addon10">
-                                <span class=""><i class="icofont icofont-refresh"></i></span>
+                                <span class=""><i class="la la-refresh"></i></span>
                             </span>
                         </div>
                     </div>
@@ -516,7 +512,7 @@
 
                 <div class="row">
                     <div class="col-sm-2 mb-2">
-                        <button class="btn btn-primary btn btn-sm btn-block"><i class="icofont icofont-refresh"></i>Ambil No. Polisi</button>
+                        <button class="btn btn-primary btn-block"><i class="la la-download"></i>Ambil No. Polisi</button>
                     </div>
 
                     <div class="col-sm-1">
@@ -536,10 +532,10 @@
                     </div>
 
                     <div class="col-2">
-                        <button class="btn btn-primary btn btn-sm btn-block"><i class="icofont icofont-save"></i>Simpan</button>
+                        <button class="btn btn-primary btn-block"><i class="la la-save"></i>Simpan</button>
                     </div>
                     <div class="col-2">
-                        <button class="btn btn-primary btn btn-sm btn-block"><i class="icofont icofont-plus"></i>Baru</button>
+                        <button class="btn btn-primary btn-block"><i class="la la-plus"></i>Baru</button>
                     </div>
                 </div>
 
@@ -551,8 +547,8 @@
         <!--end::Portlet-->
     </div>
     <?php
-        $this->load->view($this->controller.'ViewJs');
-     ?>
+    $this->load->view($this->controller . 'ViewJs');
+    ?>
 </div>
 
 <?php

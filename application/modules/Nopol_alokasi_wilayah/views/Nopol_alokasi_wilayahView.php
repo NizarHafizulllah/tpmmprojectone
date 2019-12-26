@@ -6,7 +6,8 @@
                     <label class="col-sm-2 col-form-label">POLDA</label>
                     <div class="col-sm-6">
                         <div class="input-group">
-                            <select id="hello-single" class="form-control">
+                            <select id="" class="form-control">
+                                <option value="">- Pilih POLDA -</option>
                                 <option value="cheese">Cheese</option>
                                 <option value="h">Hanry Die</option>
                                 <option value="c">Come Leo</option>
@@ -16,11 +17,11 @@
                     </div>
                 </div>
                 <div class="form-group row mb-2">
-                    <label class="col-sm-2 col-form-label">Kabupaten</label>
+                    <label class="col-sm-2 col-form-label">KABUPATEN</label>
                     <div class="col-sm-6">
                         <div class="input-group m-0">
                             <select id="" class="form-control">
-                                <option value="">- Pilih Kabupaten -</option>
+                                <option value="">- Pilih KABUPATEN -</option>
                                 <option value="cheese">Cheese</option>
                                 <option value="h">Hanry Die</option>
                                 <option value="c">Come Leo</option>
@@ -30,13 +31,13 @@
                     </div>
                 </div>
                 <div class="form-group row mb-2">
-                    <label class="col-sm-2 col-form-label">Kode Wilayah</label>
+                    <label class="col-sm-2 col-form-label">KODE WILAYAH</label>
                     <div class="col-sm-3">
                         <input type="text" name="nama" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row mb-2">
-                    <label class="col-sm-2 col-form-label">Kode Seri</label>
+                    <label class="col-sm-2 col-form-label">KODE SERI</label>
                     <div class="col-sm-3">
                         <input type="text" name="nama" class="form-control">
                     </div>
@@ -44,7 +45,7 @@
                 <div class="form-group row mb-2">
                     <label class="col-sm-2 col-form-label"></label>
                     <div class="col-sm-2">
-                        <button type="button" id="btnBaru" class="btn btn-primary"><i class="la la-save"> </i> Simpan</button>
+                        <button type="button" id="btnBaru" class="btn btn-primary"><i class="la la-save"> </i> SIMPAN</button>
                     </div>
                 </div>
             </div>
