@@ -42,13 +42,13 @@
                             <div class="col-md-8 col-lg-4">
                                 <?php echo form_dropdown("pemohon", $arr_pemohon, '', 'id="pemohon" class="form-control form-control-sm m-1"'); ?>
                             </div>
-                            <button class="btn btn-primary btn btn-sm mr-2" type="button">
+                            <button class="btn btn-info mr-2" type="button">
                                 <span>
                                     <i class="fa flaticon-refresh"></i>
                                     <span></span>
                                 </span>
                             </button>
-                            <button onclick="window.location('BbnSatuDataPemohon')" class="btn btn-primary btn btn-sm" type="button">
+                            <button onclick="window.location('BbnSatuDataPemohon')" class="btn btn-success" type="button">
                                 <span>
                                     <i class="fa flaticon-add"></i>
                                     <span></span>
@@ -60,7 +60,7 @@
                         <div class="form-group row mb-1">
                             <label class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-8">
-                                <button type="button" id="btnCariServer" class="btn btn-primary btn btn-sm ml-1"><i class=" flaticon-search"></i> Tampil Data</button>
+                                <button type="button" id="btnCariServer" class="btn btn-info ml-1"><i class=" flaticon-search"></i> TAMPIL DATA</button>
                             </div>
                         </div>
 
@@ -95,10 +95,10 @@
                         <div class="form-group row mb-2">
                             <label class="col-sm-2 col-form-label"></label>
                             <div class="col-md-8 col-lg-10">
-                                <button type="button" onclick="reset_form()" class="btn btn-primary btn btn-sm ml-1"><i class=" flaticon-add-circular-button"></i> Baru</button>
-                                <button type="button" id="btnSimpan" class="btn btn-primary btn btn-sm ml-1"><i class="fa fa-save"></i> Simpan</button>
-                                <button type="button" class="btn btn-primary btn btn-sm ml-1"><i class="flaticon-delete"></i> Hapus</button>
-                                <button type="button" class="btn btn-primary btn btn-sm ml-1"><i class="fa fa-print"></i> Cetak</button>
+                                <button type="button" onclick="reset_form()" class="btn btn-info ml-1"><i class=" flaticon-add-circular-button"></i> BARU</button>
+                                <button type="button" id="btnSimpan" class="btn btn-success ml-1"><i class="fa fa-save"></i> SIMPAN</button>
+                                <button type="button" class="btn btn-danger ml-1"><i class="flaticon-delete"></i> HAPUS</button>
+                                <button type="button" class="btn btn-primary ml-1"><i class="fa fa-print"></i> CETAK</button>
                             </div>
                         </div>
 

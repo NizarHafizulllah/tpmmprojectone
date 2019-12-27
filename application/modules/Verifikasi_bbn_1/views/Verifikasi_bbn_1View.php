@@ -23,8 +23,8 @@
                         <input type="text" name="nama" class="form-control" placeholder="Barcode Berkas">
                     </div>
                     <div class="col-md-8 col-lg-4">
-                        <button class="btn btn-primary ml-1" type="button" id="btnCariServer"><i class="la la-search"></i> CARI DATA </button>
-                        <button class="btn btn-primary ml-1" data-toggle="modal" data-target="#large-Modal"><i class="la la-plus"></i> BARU</button>
+                        <button class="btn btn-info ml-1" type="button" id="btnCariServer"><i class="la la-search"></i> CARI DATA </button>
+                        <button class="btn btn-warning ml-1" data-toggle="modal" data-target="#large-Modal"><i class="la la-plus"></i> BARU</button>
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="col-md-8 col-lg-4">
-                        <button class="btn btn-primary ml-1" type="button" id="btnCariServer"><i class="la la-check"></i> VERIFIKASI</button>
+                        <button class="btn btn-success ml-1" type="button" id="btnCariServer"><i class="la la-check"></i> VERIFIKASI</button>
                         <button class="btn btn-primary ml-1" data-toggle="modal" data-target="#large-Modal"><i class="la la-edit"></i> RUBAH</button>
                     </div>
                 </div>
@@ -314,7 +314,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

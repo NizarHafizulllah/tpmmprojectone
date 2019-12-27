@@ -168,7 +168,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <button class="col-sm-4 btn btn-primary" type="button" id="btnCariServer"><i class="la la-search"></i> Ambil No. Polisi</button>
+                                    <button class="col-sm-4 btn btn-primary" type="button" id="btnCariServer"><i class="la la-search"></i> AMBIL NO. POLISI</button>
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group input-group" id="basic-addon9">
@@ -260,13 +260,13 @@
                         <div class="form-group row">
                             <span class="col-sm-12">
                                 <label class=" col-sm-2 col-form-label"></label>
-                                <button class="btn btn-primary mr-2" type="button" id="btnCariServer"><i class="la la-search"></i> Simpan</button>
+                                <button class="btn btn-primary mr-2" type="button" id="btnCariServer"><i class="la la-search"></i> SIMPAN</button>
 
-                                <button class="btn btn-primary mr-2" type="button" id="btnCariServer"><i class="la la-search"></i> Baru</button>
+                                <button class="btn btn-primary mr-2" type="button" id="btnCariServer"><i class="la la-search"></i> BARU</button>
 
-                                <button class="btn btn-primary mr-2" data-toggle="modal" data-target="#large-Modal-Baru" type="button" id="btnCariServer"><i class="la la-search"></i> Alokasi No. Polisi Baru</button>
+                                <button class="btn btn-primary mr-2" data-toggle="modal" data-target="#large-Modal-Baru" type="button" id="btnCariServer"><i class="la la-search"></i> ALOKASI NO. POLISI BARU</button>
 
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#large-Modal-YX" type="button" id="btnCariServer"><i class="la la-search"></i> Alokasi No. Polisi YX</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#large-Modal-YX" type="button" id="btnCariServer"><i class="la la-search"></i> ALOKASI NO. POLISI YX</button>
                             </span>
                         </div>
 
