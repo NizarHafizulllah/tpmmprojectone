@@ -146,7 +146,7 @@
                         <div class="form-group row mb-2">
                             <label class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-2">
-                                <button type="button" id="btnBaru" class="btn btn-primary"><i class="la la-save"> </i> Simpan</button>
+                                <button type="button" id="btnBaru" class="btn btn-primary"><i class="la la-save"> </i> SIMPAN</button>
                             </div>
                         </div>
                     </div>

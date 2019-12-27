@@ -1,0 +1,146 @@
+<div class="col-md-4 mb-0">
+
+                                <div class="form-group input-group-sm row mb-0">
+                                    <label for="userName" class="block">Tanggal</label>
+                                   
+                                </div>
+
+                                <div class="form-group input-group-sm row mb-0">
+                                    <label for="userName" class="block">Merk</label>
+                                    <div class="input-group input-group-sm mb-0">
+                                        <?php
+                                        echo form_dropdown("merk", $arr_merk, '', 'id="merk" class="form-control mr-2 drpdwn"');
+                                        ?>
+                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-refresh"></i></span>
+                                        </button> -->
+                                    </div>
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">Tipe</label>
+                                    <input id="tipe" name="tipe" type="text" class="required form-control" placeholder="Tipe">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label for="userName" class="block">Tahun Buat</label>
+                                    <input id="thn_buat" name="thn_buat" type="text" class="required form-control" placeholder="Tahun Buat">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label for="userName" class="block">Jumlah Sumbu</label>
+                                    <input id="jml_sumbu" name="jml_sumbu" type="text" class="required form-control" placeholder="Jumlah Sumbu">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label for="userName" class="block">Peruntukan</label>
+                                    <input id="peruntukan" name="peruntukan" type="text" class="required form-control" placeholder="Peruntukan">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label for="userName" class="block">No. SUT</label>
+                                    <input id="no_sut" name="no_sut" type="text" class="required form-control" placeholder="No. SUT">
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4 mb-0">
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">No. Reg BPKB</label>
+                                    <input id="noreg_bpkb" name="noreg_bpkb" type="text" class="required form-control" placeholder="No. Reg BPKB">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">No. Rangka</label>
+                                    <input id="norangka" name="norangka" type="text" class="required form-control" placeholder="No. Rangka">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label for="userName" class="block">Jenis</label>
+                                    <div class="input-group input-group-sm mb-0">
+                                        <?php
+                                        echo form_dropdown("jenis", $arr_jenis, '', 'id="jenis" class="form-control mr-2 drpdwn"');
+                                        ?>
+
+                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-refresh"></i></span>
+                                        </button>  -->
+                                    </div>
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label for="userName" class="block">Tipe 2</label>
+                                    <input id="tipe2" name="tipe2" type="text" class="required form-control" placeholder="Tipe">
+                                </div>
+
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">Tahun Rakit</label>
+                                    <input id="thn_rakit" name="thn_rakit" type="text" class="required form-control" placeholder="Tahun Rakit">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">Bahan Bakar</label>
+                                    <input id="bhn_bakar" name="bhn_bakar" type="text" class="required form-control" placeholder="Bahan Bakar">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">No. TPT</label>
+                                    <input id="no_tpt" name="no_tpt" type="text" class="required form-control" placeholder="No. TPT">
+                                </div>
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">No. SRUT</label>
+                                    <input id="no_srut" name="no_srut" type="text" class="required form-control" placeholder="No. SRUT">
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4 mb-0">
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">Dikeluarkan di</label>
+                                    <input id="dikeluarkandi" name="dikeluarkandi" type="text" class="required form-control" placeholder="Dikeluarkan di">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">No. Mesin</label>
+                                    <input id="no_mesin" name="no_mesin" type="text" class="required form-control" placeholder="No. Mesin">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label for="userName" class="block">Model</label>
+                                    <div class="input-group input-group-sm mb-0">
+                                        <?php
+                                        echo form_dropdown("model", $arr_model, '', 'id="model" class="form-control mr-2 drpdwn"');
+                                        ?>
+
+                                        <!-- <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-refresh"></i></span>
+                                        </button>
+                                        <button class="input-group-addon btn btn-primary btn-sm ml-2" id="basic-addon10">
+                                            <span class=""><i class="flaticon-add"></i></span>
+                                        </button> -->
+                                    </div>
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">Silinder</label>
+                                    <input id="silinder" name="silinder" type="text" class="required form-control" placeholder="Silinder">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">Jumlah Roda</label>
+                                    <input id="jml_roda" name="jml_roda" type="text" class="required form-control" placeholder="Jumlah Roda">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">Warna</label>
+                                    <input id="warna" name="warna" type="text" class="required form-control" placeholder="Warna">
+                                </div>
+
+                                <div class="form-group input-group-sm row m-1">
+                                    <label class="block">Warna TNKB</label>
+                                    <input id="warna_tnkb" name="warna_tnkb" type="text" class="required form-control" placeholder="Warna TNKB">
+                                </div>
+
+                            </div>
