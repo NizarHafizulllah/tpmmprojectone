@@ -46,7 +46,7 @@
 
                 <div class="form-group row mb-2">
                     <label class="col-sm-2 col-form-label">No. BPKB</label>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <input type="text" name="nama" class="form-control" placeholder="No. BPKB">
                     </div>
                     <label class="col-sm-2 col-form-label">Tempat</label>

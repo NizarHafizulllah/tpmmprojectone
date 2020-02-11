@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
 	<meta charset="utf-8" />
 	<title><?php echo $title; ?></title>
@@ -130,7 +128,7 @@
 												<div class="m-dropdown__header m--align-center" style="background: url(<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/app/media/img/misc/user_profile_bg.jpg); background-size: cover;">
 													<div class="m-card-user m-card-user--skin-dark">
 														<div class="m-card-user__pic">
-															<img src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless" alt="" />
+															<img src="<?php echo base_url('assets/theme/default/dist/default/'); ?>/assets/app/media/img/users/user6.jpg" class="m--img-rounded m--marginless" alt="" />
 														</div>
 
 														<div class="m-card-user__details">
@@ -190,7 +188,7 @@
 				<div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark " m-menu-vertical="1" m-menu-scrollable="1" m-menu-dropdown-timeout="500" style="position: relative;">
 					<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 
-						<li class="m-menu__item " aria-haspopup="true"><a href="<?php echo site_url('Dashboard'); ?>" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i><span class="m-menu__link-title"> <span class="m-menu__link-wrap"> <span class="m-menu__link-text">Dashboard</span></span></span></a></li>
+						<li class="m-menu__item " aria-haspopup="true"><a href="<?php echo site_url('Dashboard'); ?>" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i><span class="m-menu__link-title"> <span class="m-menu__link-wrap"> <span class="m-menu__link-text">DASHBOARD</span></span></span></a></li>
 
 						<?php foreach ($this->menu as $key => $value) {
 						?>
@@ -200,7 +198,7 @@
 									<ul class="m-menu__subnav">
 
 										<?php foreach ($value['submenu'] as $key2 => $value2) {
-																																																																				$url = $value2['PATH'];
+											$url = $value2['PATH'];
 										?>
 											<li class="m-menu__item " aria-haspopup="true"><a href="<?php echo site_url($url); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text"><?php echo $value2['NAMA_SUB_GROUP'] ?></span></a></li>
 										<?php } ?>

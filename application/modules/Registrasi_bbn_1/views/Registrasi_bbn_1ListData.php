@@ -8,7 +8,7 @@
                             <i class="flaticon-calendar"></i>
                         </span>
                         <h3 class="m-portlet__head-text">
-                            List Data BPKB
+                            LIST DATA BPKB
                         </h3>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                             <a href="<?= site_url('Registrasi_bbn_1/baru'); ?>" class="btn btn-warning m-btn m-btn--custom m-btn--icon m-btn--pill m-btn--air btn-sm">
                                 <span>
                                     <i class="la la-plus"></i>
-                                    <span>Entry Data BPKB</span>
+                                    <span>ENTRY DATA BPKB</span>
                                 </span>
                             </a>
                         </li>
@@ -28,11 +28,14 @@
             <div class="m-portlet__body">
                 <div class="row">
                     <div class="col-6">
-                        <div class="form-group">
-                            <label for="userName-2" class="block">Tanggal</label>
-                            <div class="input-group input-group-md">
-                                <input id="tanggal" name="tanggal" type="text" class="required form-control mr-1 tanggal">
-                                <button type="button" class="btn btn-primary btn-sm waves-effect waves-light"><i class="fa fa-search"></i> Ambil Data Server</button>
+
+                        <div class="form-group row mb-2">
+                            <label class="col-sm-2 col-form-label">Tanggal</label>
+                            <div class="col-sm-6">
+                                <input id="tanggal" name="tanggal" type="text" value="<?php echo date('d/m/Y'); ?>" class="required form-control mr-1 tanggal">
+                            </div>
+                            <div class="col-md-8 col-lg-4">
+                                <button type="button" class="btn btn-primary waves-effect waves-light"><i class="fa fa-search"></i> AMBIL DATA SERVER</button>
                             </div>
                         </div>
                     </div>
@@ -61,7 +64,6 @@
                                     <th>Operator</th>
                                 </tr>
                             </thead>
-
                         </table>
                     </div>
                 </div>

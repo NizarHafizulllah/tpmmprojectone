@@ -8,7 +8,7 @@
                             <i class="flaticon-add"></i>
                         </span>
                         <h3 class="m-portlet__head-text">
-                            Entry Data BPKB
+                            ENTRY DATA BPKB
                         </h3>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                             <a href="<?= site_url('Registrasi_bbn_1'); ?>" class="btn btn-warning m-btn m-btn--custom m-btn--icon m-btn--pill m-btn--air btn-sm">
                                 <span>
                                     <i class="la la-plus"></i>
-                                    <span>List Data BPKB</span>
+                                    <span>LIST DATA BPKB</span>
                                 </span>
                             </a>
                         </li>

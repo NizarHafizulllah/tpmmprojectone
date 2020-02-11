@@ -32,7 +32,6 @@
                                 <button class="btn btn-primary ml-1" type="button" id="btnCariServer"><i class="la la-search"></i> CARI DATA</button>
                                 <button class="btn btn-primary ml-1" data-toggle="modal" data-target="#large-Modal"><i class="la la-plus"></i> BUAT ALOKASI BARU</button>
                             </div>
-
                         </div>
 
                         <div class="form-group row mb-2">

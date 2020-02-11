@@ -5,10 +5,10 @@
 
                 <ul class="nav nav-tabs  tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">Input Data</a>
+                        <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">INPUT DATA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#profile1" role="tab">Detail Data</a>
+                        <a class="nav-link" data-toggle="tab" href="#profile1" role="tab">DETAIL DATA</a>
                     </li>
                 </ul>
 
@@ -22,7 +22,7 @@
                             </div>
 
                             <div class="col-md-8 col-lg-4">
-                                <button class="btn btn-primary ml-1" type="button" id="btnCariServer"><i class="la la-search"></i> Cari Data</button>
+                                <button class="btn btn-primary ml-1" type="button" id="btnCariServer"><i class="la la-search"></i> CARI DATA</button>
                             </div>
                         </div>
 
